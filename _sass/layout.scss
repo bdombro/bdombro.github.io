@@ -94,6 +94,15 @@ header {
 
 .content {
 	background: #fff;
+
+	hr {
+		width: 100%;
+		margin: -80px auto 80px;
+		border: 0;
+		//border-top: 1px solid #aaa;
+		height: 40px;
+		background: url(/images/border-bottom4.svg) bottom center / 20px 10px repeat-x;
+	}
 }
 
 .info img {
@@ -166,7 +175,7 @@ blockquote:before {
 }
 
 .learn-more {
-	margin: 40px 0 0;
+	margin: 40px 0 20px;
 	text-align: center;
 	font-size: 1.4em;
 	width: 100%;
@@ -221,4 +230,16 @@ blockquote:before {
 
 .cms-editor-active .editor-link {
 	display: block;
+}
+
+.shown-xs {
+	@media #{$desktop} {
+		display: none;
+	}
+}
+
+.hidden-xs {
+	@media only screen and (max-width: #{$desktop-width}px) {
+		display: none;
+	}
 }

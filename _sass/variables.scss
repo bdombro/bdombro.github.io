@@ -1,6 +1,9 @@
 $brand-color: #6ba1f3;
 
 // Breakpoints
-$tablet: "(min-width: 450px)";
-$mid-point: "(min-width: 620px)";
-$desktop: "(min-width: 768px)";
+$tablet-width: 450;
+$mid-point-width: 620;
+$desktop-width: 768;
+$tablet: "(min-width: #{$tablet-width}px)";
+$mid-point: "(min-width: #{$mid-point-width}px)";
+$desktop: "(min-width: #{$desktop-width}px)";
