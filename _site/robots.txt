@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://brave-submarine.cloudvent.net/sitemap.xml
