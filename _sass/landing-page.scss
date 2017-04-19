@@ -1,8 +1,9 @@
 .hero {
 	color: #ffffff;
 	text-align: center;
-	height: 100vh;
-	min-height: 550px;
+	height: auto;
+	padding: 100px 0 20px;
+
 	background-color: #333;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -40,6 +41,10 @@
 	.hero-text-right {
 		position: absolute;
 		right: 0;
+	}
+
+	@media #{$tablet} {
+		height: 100vh;
 	}
 }
 
