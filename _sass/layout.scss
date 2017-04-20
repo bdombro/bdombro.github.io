@@ -175,7 +175,10 @@ blockquote:before {
 }
 
 .learn-more {
-	margin: 40px 0 20px;
+	//margin: 40px 0 20px;
+	position: absolute;
+	left: 0;
+	bottom: 30px;
 	text-align: center;
 	font-size: 1.4em;
 	width: 100%;
@@ -191,12 +194,6 @@ blockquote:before {
 	}
 	.arrow {
 		font-size: .6em;
-	}
-
-	@media #{$tablet} {
-		position: absolute;
-		left: 0;
-		bottom: 30px;
 	}
 }
 
