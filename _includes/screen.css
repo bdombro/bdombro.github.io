@@ -497,7 +497,9 @@ header {
       text-decoration: none; }
   header .company-name {
     font-size: 1.7em;
-    display: inline-block; }
+    display: inline-block;
+    width: 124px;
+    height: 30px; }
   header .nav-open nav {
     border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
     padding: 10px 0; }
