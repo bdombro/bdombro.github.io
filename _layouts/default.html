@@ -9,15 +9,8 @@
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.ico">
 		<meta property="fb:app_id" content="{{ site.fb_app_id }}">
-
-		{% seo %}
-		{% feed_meta %}
-
-
-		<!-- Chrome browser theming -->
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#012559">
-
 		<!-- More info on JSON-LD at https://developers.google.com/search/docs/guides/intro-structured-data -->
 		<script type="application/ld+json">
 		  {
@@ -32,39 +25,11 @@
 		  }
 	  </script>
 
-		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
-			<!-- Google Analytics -->
-			<script>
-				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-				ga('create', "{{ site.google_analytics_key }}", 'auto');
-				ga('send', 'pageview');
-			</script>
-			<script async src='//www.google-analytics.com/analytics.js'></script>
-			<!-- End Google Analytics -->
-		{% endif %}
 
-		{% if jekyll.environment == 'production' %}
-			<script>
-				(function () {
-					'use strict';
-					if ('serviceWorker' in navigator) {
-						navigator.serviceWorker.register('/service-worker.js', {
-							scope: "/"
-						}).then(function (registration) {
-							// Registration was successful
-							console.log('ServiceWorker registration successful with scope: ', registration.scope);
-							// Trim the caches on load
-							navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage({
-								command: "trimCaches"
-							});
-						}).catch(function (err) {
-							// registration failed :(
-							console.log('ServiceWorker registration failed: ', err);
-						});
-					}
-				})();
-			</script>
-		{% endif %}
+		{% seo %}
+		{% feed_meta %}
+
+		{% include register-service-worker.html %}
 
 		<style type="text/css">
 			{% include screen.css %}
@@ -81,7 +46,7 @@
 
 		{% include footer.html %}
 
-		<script>{% include anchor-scrolls.js %}</script>
-
+		{% include animate-anchor-scrolls.html %}
+		{% include google-analytics.html %}
 	</body>
 </html>
