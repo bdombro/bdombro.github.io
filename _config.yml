@@ -1,36 +1,35 @@
 # ----
 # Site
 
-title: Frisco Template
-url: "https://suncesailing.com"
+title: DC Facades
+url: "https://dcfacades.com"
 baseurl:
-google_analytics_key: UA-97693659-1
+google_analytics_key:
 google_maps_javascript_api_key: AIzaSyDj-bVK8EaDmKmAAtNIuo1fvWLDTbLuLI0
-fb_app_id: 1299829076759410
+fb_app_id:
 disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: App marketing template for Jekyll.
+description: Signs and Storefront Improvement Services
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: Brian Dombrowski
+  email: brian@benevolent.tech
+  twitter: benevolentweb
 social:
-  name: Frisco Template
+  name: DC Facades
   links:
-    - https://github.com/CloudCannon/frisco-jekyll-template
+    - https://benevolent.tech
 
 # -----
 # Build
 
-permalink: pretty
+permalink: /blog/:title.html
 
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-archives
 
 exclude:
@@ -82,5 +81,5 @@ social_icons:
   - RSS
 
 _comments:
-  description: Text shown when sharing on social media
-  blurb: Short bio or description of this person
+  description: Signs and Storefront Improvement Services
+  blurb: Signs and Storefront Improvement Services

@@ -39,12 +39,14 @@
 
 	</head>
 
-	<body>
+	<body class="homepage">
+		<div id="page-wrapper">
 		{% include header.html %}
 
 		{{ content }}
 
 		{% include footer.html %}
+		</div>
 
 		{% include load-deferred-images.html %}
 		{% include animate-anchor-scrolls.html %}
