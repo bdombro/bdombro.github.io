@@ -2,9 +2,9 @@ left_links:
 #  - name: Blog
 #    link: /blog/
   - name: About
-    link: /about/
+    link: /about
   - name: Contact
-    link: /contact/
+    link: /contact
 right_links:
   - name:
     link: https://facebook.com/
