@@ -538,8 +538,8 @@ ol {
 
 #banner {
   background: #CCE8F4;
-  background-position: center center;
-  background-size: auto 100%;
+  background-image: url(/images/sticky_rice_dc.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 
@@ -861,6 +861,24 @@ ol {
             font-weight: 700;
           }
         }
+      }
+    }
+  }
+
+  .nav-open #nav nav{
+    border-bottom: 1px dotted rgba(255, 255, 255, .2);
+    padding: 10px 0;
+    a {
+      display: block;
+      padding: 30px 0;
+    }
+
+    @include breakpoint(tablet) {
+      border: 0;
+      padding: 0 20px;
+
+      a {
+        display: inline;
       }
     }
   }

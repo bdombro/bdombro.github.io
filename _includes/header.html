@@ -12,90 +12,27 @@
 
     <!-- Nav -->
     <nav id="nav">
+      <a class="nav-toggle hidden-tablet" id="open-nav" href="javascript:void(0);">&#9776;</a>
       <ul>
         <li class="current"><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/awards">Awards</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="javascript:void(0);">About</a></li>
+        <li><a href="javascript:void(0);">Work</a></li>
+        <li><a href="javascript:void(0);">Awards</a></li>
+        <li><a href="javascript:void(0);">Contact</a></li>
       </ul>
     </nav>
 
   </div>
 </div>
 
-<!--
-<header id="mainHeader">
-  <div class="container">
-    <div class="company-name">
-      <a href="{{ site.baseurl }}/">
-        <span class="dark-logo"><img height="30" width="124" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ site.baseurl }}/images/logo/dark.png" alt="dark frisco logo"></span>
-        <span class="light-logo"><img height="30" width="124" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ site.baseurl }}/images/logo/light.png" alt="light frisco logo"></span>
-      </a>
-    </div>
-
-    <nav>
-      <a class="nav-toggle" id="open-nav" href="javascript:void(0);">&#9776;</a>
-
-      {% for link in site.data.navigation %}
-        {% assign class = "" %}
-
-        {% if link.highlight %}
-          {% assign class = class | append: " highlight" %}
-        {% endif %}
-
-        {% if link.link == page.url %}
-          {% assign class = class | append: " active" %}
-        {% endif %}
-
-        <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-      {% endfor %}
-
-    </nav>
-
-    <p class="editor-link"><a style="display:inline;" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a></p>
-  </div>
-</header>
-
-
 <script>
   (function () {
-
-    // Poor mans throttle
-    function header_throttle(fn, wait) {
-      var time = Date.now();
-      return function () {
-        if ((time + wait - Date.now()) < 0) {
-          fn();
-          time = Date.now();
-        }
-      }
-    }
-
-    var header = document.getElementById("mainHeader");
-    function changeHeader() {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      header.classList.toggle("header-background", scrollTop >= 50 || document.body.classList.contains("nav-open"));
-    }
-    var didScroll = false;
-    window.addEventListener('scroll', header_throttle(function () {
-      didScroll = true;
-    }, 100));
-    setInterval(function () {
-      if (didScroll) {
-        didScroll = false;
-        changeHeader();
-      }
-    }, 100);
-    changeHeader();
 
     /* Mobile Header */
     document.getElementById("open-nav").addEventListener("click", function (event) {
       event.preventDefault();
       document.body.classList.toggle("nav-open");
-      changeHeader();
     });
 
   })();
 </script>
--->
