@@ -63,24 +63,6 @@ header {
 		height: 30px;
 	}
 
-	.nav-open nav {
-		border-bottom: 1px dotted rgba(255, 255, 255, .2);
-		padding: 10px 0;
-		a {
-			display: block;
-			padding: 30px 0;
-		}
-
-		@media #{$mid-point} {
-			border: 0;
-			padding: 0 20px;
-
-			a {
-				display: inline;
-			}
-		}
-	}
-
 	nav {
 		text-transform: uppercase;
 		font-size: .8em;
@@ -133,5 +115,23 @@ header {
 			}
 		}
 
+	}
+}
+
+.nav-open nav {
+	border-bottom: 1px dotted rgba(255, 255, 255, .2);
+	padding: 10px 0;
+	a {
+		display: block;
+		padding: 30px 0;
+	}
+
+	@media #{$mid-point} {
+		border: 0;
+		padding: 0 20px;
+
+		a {
+			display: inline;
+		}
 	}
 }
