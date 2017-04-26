@@ -610,8 +610,20 @@ ol {
     opacity: 0.5;
   }
 
-  a {
+  a:not(.icon) {
     color: #c5c4c4;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  .footer-links {
+    padding-top: 5px;
+    font-size: 22px;
+    a {
+      text-decoration: none;
+    }
   }
 
   h2, h3, h4, h5, h6, strong, b {
@@ -974,7 +986,7 @@ ol {
 
   ul {
     &.social {
-      text-align: left;
+      text-align: right;
       li {
         margin: 0 0 0.25em 0.75em;
       }
