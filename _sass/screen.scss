@@ -125,15 +125,13 @@ hr {
 }
 
 .hidden-mobile-block {
-  display: none;
-  @include breakpoint(tablet) {
-    display: block;
+  @include breakpoint(mobile) {
+    display: none;
   }
 }
 .hidden-mobile-inline-block {
-  display: none;
-  @include breakpoint(tablet) {
-    display: inline-block;
+  @include breakpoint(mobile) {
+    display: none;
   }
 }
 .hidden-tablet {
