@@ -1,7 +1,8 @@
+@charset "UTF-8";
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@charset "UTF-8";
+@import "libs/skel";
 //@import url("font-awesome.min.css");
 //@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
@@ -10,8 +11,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-@import "libs/skel";
 
 @include skel-breakpoints((
         desktop: '(min-width: 737px)',
@@ -374,7 +373,7 @@ ul {
   &.social {
     overflow: hidden;
     cursor: default;
-    text-align: center;
+    text-align: right;
     margin-bottom: 0;
 
     li {
@@ -594,25 +593,7 @@ ol {
 
 #main-wrapper {
   position: relative;
-  background: #f7f7f7 url('images/bg02.png');
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: url('images/bg01.png');
-    background-size: 100% 100%;
-    z-index: 0;
-    opacity: 0.1;
-  }
-
-  .major {
-    h2 {
-      background: #f7f7f7 url('images/bg02.png');
-    }
-  }
+  background: #f7f7f7;
 }
 
 #footer-wrapper {
@@ -792,7 +773,6 @@ ol {
     }
 
     &.social {
-
       li {
         margin-left: 0.75em;
       }
@@ -1163,6 +1143,7 @@ ol {
     }
 
     &.social {
+      text-align: center;
       li {
         margin: 0 0.5em 0.75em 0;
       }
