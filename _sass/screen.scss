@@ -375,6 +375,7 @@ ul {
     overflow: hidden;
     cursor: default;
     text-align: center;
+    margin-bottom: 0;
 
     li {
       display: inline-block;
@@ -385,8 +386,8 @@ ul {
 
       a {
         display: inline-block;
-        width: 3em;
-        height: 3em;
+        width: 50px;
+        height: 43px;
         text-align: center;
         border-radius: 5px;
         background: #888;
@@ -618,18 +619,7 @@ ol {
   position: relative;
   color: #858484;
   background: #252122;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: url('images/bg01.png');
-    background-size: 100% 100%;
-    z-index: 0;
-    opacity: 0.5;
-  }
+  padding: 12px 20px 24px;
 
   a:not(.icon) {
     color: #c5c4c4;
@@ -817,18 +807,6 @@ ol {
 
   #main-wrapper {
     padding: 4em 0 4em 0;
-  }
-
-  #footer-wrapper {
-    padding: 4em 0 4em 0;
-
-    header {
-      margin: 0 0 3em 0;
-
-      h2 {
-        font-size: 1.75em;
-      }
-    }
   }
 
   /* Nav */
@@ -1029,22 +1007,6 @@ ol {
     padding: 2.75em 0 2.75em 0;
   }
 
-  #footer-wrapper {
-    padding: 3em 0 3em 0;
-
-    &:before {
-      height: 2.5em;
-    }
-
-    header {
-      margin: 0 0 1.5em 0;
-
-      h2 {
-        font-size: 1.25em;
-      }
-    }
-  }
-
   /* Header */
 
   #header {
@@ -1113,7 +1075,7 @@ ol {
   /* Section/Article */
 
   section, article {
-    margin: 0 0 1.5em 0 !important;
+    margin: 0 0 1.5em 0;
   }
 
   header {
@@ -1225,12 +1187,6 @@ ol {
         margin-bottom: 0px;
       }
     }
-  }
-
-  #footer-wrapper {
-    padding: 2em 25px;
-    overflow: hidden;
-    -webkit-transform: translateZ(0);
   }
 
   /* Intro */
