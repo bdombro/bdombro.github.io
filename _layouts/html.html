@@ -42,11 +42,13 @@
 	<body class="homepage">
 		{{ content }}
 
-
+		{% if jekyll.environment == 'production' %}
+		<script defer async type="text/javascript" src="/assets/bundle.min.js"></script>
+		{% else %}
 		<script defer type="text/javascript" src="/assets/vendor.min.js"></script>
 		<script defer async type="text/javascript" src="/assets/custom.min.js"></script>
+		{% endif %}
 
-		<!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>-->
 		{% include google-analytics.html %}
 	</body>
 </html>

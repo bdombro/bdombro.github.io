@@ -70,6 +70,21 @@ gulp.task('js-custom', function (cb) {
 });
 
 
+gulp.task('js-production', ['js-lib', 'js-custom'], function (cb) {
+  pump([
+      gulp.src([
+        'assets/vendor.min.js',
+        'assets/custom.min.js'
+      ]),
+      concat('bundle.min.js'),
+      uglify({ preserveComments: 'license' }),
+      gulp.dest('assets')
+    ],
+    cb
+  );
+});
+
+
 gulp.task('jekyll-build', function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ bundle exec jekyll build');
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
@@ -101,7 +116,7 @@ gulp.task('watch', function () {
   gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', 'assets/screen.css', 'assets/bundle.js'], ['jekyll-rebuild']);
 });
 
-gulp.task('build-all', ['css', 'js-lib', 'js-custom', 'jekyll-build']);
+gulp.task('build-all', ['css', 'js-production', 'jekyll-build']);
 gulp.task('serve', ['browser-sync', 'watch']);
 
 
