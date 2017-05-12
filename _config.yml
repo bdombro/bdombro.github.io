@@ -49,6 +49,27 @@ paginate_path: "/blog/:num/"
 jekyll-archives:
   enabled: ['categories']
 
+#algolia:
+#  application_id: 'MUZJLD13O2'
+#  index_name:     'Benevolent Tech Main'
+#  record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
+#  settings:
+#      attributesToIndex:
+#        - title
+#        - h1
+#        - h2
+#        - h3
+#        - h4
+#        - h5
+#        - h6
+#        - unordered(text)
+#        - unordered(tags)
+#        - ul
+#        - ol
+#  excluded_files:
+#      - seo-starter-spreadsheet-success.html
+#      - newsletter-success.html
+
 defaults:
   -
     scope:
