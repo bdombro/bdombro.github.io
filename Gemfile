@@ -8,4 +8,5 @@ group :jekyll_plugins do
 	gem 'jekyll-paginate', '1.1.0'
 	gem 'jekyll-archives', '2.1.1'
 	gem 'jekyll-sitemap', '0.12.0'
+	gem 'compass'
 end

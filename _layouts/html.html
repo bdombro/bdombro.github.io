@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.ico">
+		<meta property="fb:app_id" content="{{ site.fb_app_id }}">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="#012559">
+		<!-- More info on JSON-LD at https://developers.google.com/search/docs/guides/intro-structured-data -->
+		<script type="application/ld+json">
+		  {
+		    "@context": "http://schema.org",
+		    "@type": "Organization",
+		    "url": "{{ site.baseurl }}",
+		    "contactPoint": [{
+		      "@type": "ContactPoint",
+		      "telephone": "+1-202-644-2237",
+		      "contactType": "leadership"
+		    }]
+		  }
+	  </script>
+
+
+		{% seo %}
+		{% feed_meta %}
+
+		{% include register-service-worker.html %}
+
+		<link rel="stylesheet" href="/assets/screen.css" />
+
+		{% include ie.html %}
+		{% include noncritical-css.html %}
+
+
+	</head>
+
+	<body class="homepage">
+		{{ content }}
+
+
+		<script defer type="text/javascript" src="/assets/vendor.min.js"></script>
+		<script defer async type="text/javascript" src="/assets/custom.min.js"></script>
+
+		<!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>-->
+		{% include google-analytics.html %}
+	</body>
+</html>

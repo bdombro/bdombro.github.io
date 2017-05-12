@@ -3,8 +3,6 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import "libs/skel";
-//@import url("font-awesome.min.css");
-//@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
 /*
 	Dopetrope by HTML5 UP
@@ -541,7 +539,6 @@ ol {
   background-repeat: no-repeat;
   text-align: center;
 
-
   > div {
     background-color: #252122;
     background-color: rgba(34, 30, 31, 0.98);
@@ -831,20 +828,48 @@ ol {
     }
   }
 
-  .nav-open #nav nav{
-    border-bottom: 1px dotted rgba(255, 255, 255, .2);
-    padding: 10px 0;
-    a {
-      display: block;
-      padding: 30px 0;
+  .dropotron {
+    border-radius: 5px;
+    background-color: #252122;
+    background-color: rgba(34, 30, 31, 0.98);
+    padding: 1.25em 1.5em 1.25em 1.5em;
+    font-style: italic;
+    min-width: 13em;
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-top: -1.25em;
+    margin-left: -1px;
+
+    a, span {
+      color: #aaa;
+      text-decoration: none;
+      @include vendor('transition', 'color .25s ease-in-out');
     }
 
-    @include breakpoint(tablet) {
-      border: 0;
-      padding: 0 20px;
+    li {
+      padding: 0.25em 0 0.25em 0;
 
-      a {
-        display: inline;
+      &:hover > {
+        a, span {
+          color: #fff;
+        }
+      }
+    }
+
+    &.level-0 {
+      margin-top: 2em;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        top: -9px;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+        border-bottom: solid 10px #252122;
+        border-bottom-color: rgba(34, 30, 31, 0.98);
       }
     }
   }
@@ -1150,6 +1175,137 @@ ol {
     }
   }
 
+  /* Off-Canvas Navigation */
+
+  #page-wrapper {
+    @include vendor('backface-visibility', 'hidden');
+    @include vendor('transition', 'transform #{_duration(navPanel)} ease');
+    padding-bottom: 1px;
+  }
+
+  #titleBar {
+    @include vendor('backface-visibility', 'hidden');
+    @include vendor('transition', 'transform #{_duration(navPanel)} ease');
+    display: block;
+    height: 44px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: _misc(z-index-base) + 1;
+    background: none;
+
+    .toggle {
+      width: 80px;
+      height: 60px;
+
+      &:before {
+        font-family: FontAwesome;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\f0c9';
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 50px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        background: rgba(150, 150, 150, 0.75);
+        border-radius: 5px;
+      }
+
+      &:active:before {
+        background-color: rgba(150, 150, 150, 1);
+      }
+    }
+  }
+
+  #navPanel {
+    @include vendor('backface-visibility', 'hidden');
+    @include vendor('transform', 'translateX(#{_size(navPanel) * -1})');
+    @include vendor('transition', ('transform #{_duration(navPanel)} ease'));
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: _size(navPanel);
+    z-index: _misc(z-index-base) + 2;
+    color: #858484;
+    background: #252122;
+    box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
+
+    .link {
+      display: block;
+      color: #888;
+      text-decoration: none;
+      height: 44px;
+      line-height: 44px;
+      border-top: solid 1px rgba(255, 255, 255, 0.05);
+      padding: 0 1em 0 1em;
+      font-style: italic;
+
+      &:first-child {
+        border-top: 0;
+      }
+      &:hover {
+        background: gray;
+      }
+    }
+
+    .indent-1 {
+      display: inline-block;
+      width: 1em;
+    }
+
+    .indent-2 {
+      display: inline-block;
+      width: 2em;
+    }
+
+    .indent-3 {
+      display: inline-block;
+      width: 3em;
+    }
+
+    .indent-4 {
+      display: inline-block;
+      width: 4em;
+    }
+
+    .indent-5 {
+      display: inline-block;
+      width: 5em;
+    }
+
+    .depth-0 {
+      color: #fff;
+    }
+  }
+
+  body {
+    &.navPanel-visible {
+      #page-wrapper {
+        @include vendor('transform', 'translateX(#{_size(navPanel)})');
+      }
+
+      #titleBar {
+        @include vendor('transform', 'translateX(#{_size(navPanel)})');
+      }
+
+      #navPanel {
+        @include vendor('transform', 'translateX(0)');
+      }
+    }
+  }
 
   /* Wrappers */
 
