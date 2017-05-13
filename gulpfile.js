@@ -11,6 +11,13 @@ var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 
 
+// Just a shortcut for purging cloudflare
+// gulp.task('cf-purge', function(done) {
+//   return cp.spawn('cfcli', ['purge', '-d', 'dcfacades.com'], {stdio: 'inherit'})
+//     .on('close', done);
+// });
+
+
 gulp.task('css', function (cb) {
   pump([
       gulp.src('_sass/screen.scss'),
