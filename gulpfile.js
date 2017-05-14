@@ -20,9 +20,15 @@ gulp.task('optimize-images', function () {
 });
 
 
-// Just a shortcut for purging cloudflare
+// Shortcut for purging cloudflare
 // gulp.task('cf-purge', function(done) {
 //   return cp.spawn('cfcli', ['purge', '-d', 'dcfacades.com'], {stdio: 'inherit'})
+//     .on('close', done);
+// });
+
+// Shortcut for pushing algolia search index
+// gulp.task('algolia-push', ['build-all'], function (done) {
+//   cp.spawn('bundle', ['exec', 'jekyll', 'algolia', 'push'], {stdio: 'inherit'})
 //     .on('close', done);
 // });
 
@@ -40,15 +46,15 @@ gulp.task('screenshot', function (done) {
     .viewport(1200, 1200)
     .screenshot('tmp/screenshot.png')
     .end()
-    .then(function (result) { child.kill(); })
+    .then(function (result) { return child.kill(); })
     .then(function (result) {
       return cp.spawn('convert', ['-resize', '1200', 'tmp/screenshot.png', 'tmp/screenshot.jpg'], {stdio: 'inherit'})
-    })
-    .then(function (result) {
-      cp.spawn('jpegtran', ['-optimize', '-progressive', '-outfile', 'images/screenshot.square.jpg', 'tmp/screenshot.jpg'], {stdio: 'inherit'});
-    })
-    .then(function (result) {
-      cp.spawn('jpegtran', ['-optimize', '-progressive', '-crop', '1200x500', '-outfile', 'images/screenshot.fold.jpg', 'tmp/screenshot.jpg'], {stdio: 'inherit'});
+        .on('close', function() {
+          return cp.spawn('jpegtran', ['-optimize', '-progressive', '-outfile', 'images/screenshot.square.jpg', 'tmp/screenshot.jpg'], {stdio: 'inherit'})
+            .on('close', function () {
+              return cp.spawn('jpegtran', ['-optimize', '-progressive', '-crop', '1200x500', '-outfile', 'images/screenshot.fold.jpg', 'tmp/screenshot.jpg'], {stdio: 'inherit'});
+            });
+        });
     })
     .catch(function (error) {
       child.kill();
@@ -169,11 +175,10 @@ gulp.task('build-all', ['css', 'js-production', 'jekyll-build']);
 gulp.task('serve', ['browser-sync', 'watch']);
 
 
+// gulp.task('deploy', ['algolia-push'], function (done) {
 gulp.task('deploy', ['build-all'], function (done) {
-  cp.spawn('bundle', ['exec', 'jekyll', 'algolia', 'push'], {stdio: 'inherit'}).on('close', function () {
-    cp.spawn('git', ['push'], {stdio: 'inherit'}).on('close',
-      done)
-  });
+  cp.spawn('git', ['push'], {stdio: 'inherit'})
+    .on('close', done)
 });
 
 gulp.task('default', ['build-all']);
