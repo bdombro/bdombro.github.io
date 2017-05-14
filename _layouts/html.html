@@ -7,7 +7,7 @@
 		<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.ico">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.ico">
 		<meta property="fb:app_id" content="{{ site.fb_app_id }}">
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#012559">
@@ -31,7 +31,7 @@
 
 		{% include register-service-worker.html %}
 
-		<link rel="stylesheet" href="/assets/screen.css" />
+		<link rel="stylesheet" href="/css/screen.css" />
 
 		{% include ie.html %}
 		{% include noncritical-css.html %}
@@ -43,10 +43,10 @@
 		{{ content }}
 
 		{% if jekyll.environment == 'production' %}
-		<script defer async type="text/javascript" src="/assets/bundle.min.js"></script>
+		<script defer async type="text/javascript" src="/js/bundle.min.js"></script>
 		{% else %}
-		<script defer type="text/javascript" src="/assets/vendor.min.js"></script>
-		<script defer async type="text/javascript" src="/assets/custom.min.js"></script>
+		<script defer type="text/javascript" src="/js/libs.min.js"></script>
+		<script defer async type="text/javascript" src="/js/custom.min.js"></script>
 		{% endif %}
 
 		{% include google-analytics.html %}

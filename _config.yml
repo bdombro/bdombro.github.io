@@ -38,6 +38,9 @@ exclude:
   - README.md
   - LICENCE
   - node_modules
+  - gulpfile.js
+  - css/_src
+  - js/_src
 
 collections:
   staff_members:
