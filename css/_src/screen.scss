@@ -584,6 +584,11 @@ ol {
         &:hover {
           color: #D52349
         }
+
+        > img {
+          max-width: 80%;
+          width: 300px;
+        }
       }
     }
   }
