@@ -141,7 +141,7 @@ gulp.task('js-production', ['js-libs', 'js-custom'], function (cb) {
 });
 
 
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', ['css', 'js-production'], function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ bundle exec jekyll build');
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
     .on('close', done);
