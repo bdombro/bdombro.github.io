@@ -50,5 +50,9 @@
 		{% endif %}
 
 		{% include google-analytics.html %}
+		{% include google-tag-manager.html %}
+
+		<!-- Load instantsearch last b/c is really big, and only needed for search page. -->
+		<script async defer src="/js/instantsearch.min.js"></script>
 	</body>
 </html>

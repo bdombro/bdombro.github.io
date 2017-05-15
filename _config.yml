@@ -5,6 +5,7 @@ title: DC Facades
 url: "https://dcfacades.com"
 baseurl:
 google_analytics_key:
+google_tag_manager_key:
 google_maps_javascript_api_key: AIzaSyDj-bVK8EaDmKmAAtNIuo1fvWLDTbLuLI0
 fb_app_id:
 disqus_shortname:
