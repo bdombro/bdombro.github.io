@@ -5,3 +5,7 @@ node_modules
 Gemfile.lock
 *.map
 tmp
+css/screen.css
+js/bundle.min.js
+js/custom.min.js
+js/libs.min.js
