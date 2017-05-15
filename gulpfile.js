@@ -85,11 +85,12 @@ gulp.task('css', function (cb) {
 gulp.task('js-libs', function (cb) {
   pump([
       gulp.src([
+        'js/_src/libs/smooth-scroll.js',
+        'js/_src/libs/echo.js',
         'js/_src/libs/jquery.js',
         'js/_src/libs/jquery.dropotron.js',
         'js/_src/libs/skel.js',
-        'js/_src/libs/skel-viewport.js',
-        'js/_src/libs/smooth-scroll.js'
+        'js/_src/libs/skel-viewport.js'
       ]),
       sourcemaps.init(),
       concat('libs.min.js'),
@@ -103,11 +104,8 @@ gulp.task('js-libs', function (cb) {
 
 
 gulp.task('js-custom', function (cb) {
-
   pump([
       gulp.src([
-        'js/_src/smooth-scroll-init.js',
-        'js/_src/load-deferred-images.js',
         'js/_src/util.js',
         'js/_src/main.js'
       ]),
@@ -148,8 +146,12 @@ gulp.task('jekyll-build', ['css', 'js-production'], function (done) {
 });
 
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-  browserSync.reload();
+gulp.task('jekyll-rebuild', function (done) {
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+      .on('close', function () {
+        browserSync.reload();
+        return done();
+      });
 });
 
 
@@ -167,8 +169,8 @@ gulp.task('browser-sync', ['build-all'], function () {
 
 gulp.task('watch', function () {
   gulp.watch('css/_src/*', ['css']);
-  gulp.watch('js/_src/*', ['js-production']);
-  gulp.watch(['_config.yml', '*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md', 'css/*.css', 'js/*.js'], ['jekyll-rebuild']);
+  gulp.watch('js/_src/*', ['js-custom']);
+  gulp.watch(['_config.yml', '*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md', '_plugins/*', 'css/*.css', 'js/*.js'], ['jekyll-rebuild']);
 });
 
 gulp.task('build-all', ['css', 'js-production', 'jekyll-build']);
