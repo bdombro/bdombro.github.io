@@ -10,7 +10,7 @@ module Jekyll
 
     class << self
       def Lazyify(doc)
-        return unless doc.output.include?("img")
+        return unless doc.output.include?("<img")
         doc.output = doc.output.gsub(/(<img.*) src=(")(.*)(") (?!data-echo)(.*>)/, '\1 src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="" data-echo="\3" \5')
       end
 
