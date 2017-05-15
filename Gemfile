@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '3.3.1'
+gem 'jekyll'
 
 group :jekyll_plugins do
-	gem 'jekyll-feed', '0.8.0'
-	gem 'jekyll-seo-tag', '2.1.0'
-	gem 'jekyll-paginate', '1.1.0'
-	gem 'jekyll-archives', '2.1.1'
-	gem 'jekyll-sitemap', '0.12.0'
-	# gem 'algoliasearch-jekyll'
+	gem 'jekyll-feed'
+	gem 'jekyll-seo-tag'
+	gem 'jekyll-paginate-v2'
+	gem 'jekyll-archives'
 	gem 'compass'
+	gem 'jekyll_image_encode'
+	gem 'jekyll-sitemap'
+	gem 'jekyll-mentions'
+	# gem 'algoliasearch-jekyll'
 end
+
