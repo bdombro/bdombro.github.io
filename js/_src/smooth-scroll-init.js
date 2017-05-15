@@ -1,1 +1,0 @@
-smoothScroll.init({selector: "a[href*=\\#]"}); // default selector = [data-scroll]
