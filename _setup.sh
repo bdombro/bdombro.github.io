@@ -26,6 +26,6 @@ npm install
 
 echo ""
 echo "All set! Now you can do most anything you want using the gulp command."
-echo "For example, use `gulp serve` to (1) watch the source files, (2) compile the source files on change, (3) run a local server at http://localhost:8080, (4) open the url in Chrome browser, (5) auto-refresh the browser on change."
+echo "For example, use `gulp serve` to (1) watch the source files, (2) compile the source files on change, (3) run a local server at http://localhost:3000, (4) open the url in Chrome browser, (5) auto-refresh the browser on change."
 echo "See the gulpfile for more info."
 echo ""
