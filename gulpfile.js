@@ -94,7 +94,8 @@ gulp.task('js-libs', function (cb) {
       ]),
       sourcemaps.init(),
       concat('libs.min.js'),
-      uglify({preserveComments: 'license'}),
+      // uglify({preserveComments: 'license'}),
+      uglify(),
       sourcemaps.write('.'),
       gulp.dest('js')
     ],
