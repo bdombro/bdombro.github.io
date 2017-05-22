@@ -132,7 +132,8 @@ gulp.task('js-production', ['js-libs', 'js-custom'], function (cb) {
         'js/custom.min.js'
       ]),
       concat('bundle.min.js'),
-      uglify({preserveComments: 'license'}),
+      // uglify({preserveComments: 'license'}),
+      uglify(),
       gulp.dest('js')
     ],
     cb
