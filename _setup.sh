@@ -15,6 +15,7 @@ rbenv rehash
 echo "export PATH=~/.rbenv/versions/2.4.0/bin/:\$PATH" >> ~/.bashrc
 echo "export PATH=~/.rbenv/versions/2.4.0/bin/:\$PATH" >> ~/.profile
 export PATH=~/.rbenv/versions/2.4.0/bin/:$PATH
+gem install bundle
 bundle install
 
 # Node
