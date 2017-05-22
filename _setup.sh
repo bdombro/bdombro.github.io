@@ -20,6 +20,7 @@ bundle install
 
 # Node
 brew install node
+# Note: Warnings are acceptable for the npm install commands
 npm install -g jpegtran gulp cf-cli http-server
 npm install
 
