@@ -20,10 +20,7 @@ bundle install
 
 # Node
 brew install node
-npm install -g jpegtran
-npm install -g gulp
-npm install -g cf-cli
-npm install -g http-server
+npm install -g jpegtran gulp cf-cli http-server
 npm install
 
 echo ""
