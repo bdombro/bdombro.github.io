@@ -134,7 +134,9 @@
 
 });
 
+// Init after dom is loaded but before everything is loaded
 echo.init({
-    offset: 2000,
-    unload: true
+  offset: 1000,
+  debounce: false,
+  unload: true
 });

@@ -1,6 +1,6 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo "export PATH=/usr/local/bin:\$PATH" >> ~/.bashrc
-export PATH=$PATH:/usr/local/bin
+export PATH=/usr/local/bin:$PATH
 brew update
 
 # Imagegick
