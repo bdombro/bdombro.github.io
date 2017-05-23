@@ -10,10 +10,11 @@ module Jekyll
 
     class << self
       def embedify(doc)
-        return unless doc.output.include?("https://vimeo.com/") | doc.output.include?("https://youtube.com/")
+        return unless doc.output.include?("https://vimeo.com/") | doc.output.include?("https://www.youtube.com/")
         # Vimeo
         doc.output = doc.output.gsub(/<p>(https:\/\/)(vimeo.com)(\/.*)<\/p>/, "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='\\1player.\\2\/video\\3' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><br>")
-        doc.output = doc.output.gsub(/<p>(https:\/\/)(youtube.com)(\/watch\?v\=)(.*)<\/p>/, "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='\\1www.\\2\/embed\/\\4' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><br>")
+        # Youtube
+        doc.output = doc.output.gsub(/<p>(https:\/\/www\.)(youtube.com)(\/watch\?v\=)(.*)<\/p>/, "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='\\1\\2\/embed\/\\4' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><br>")
       end
 
       # Public: Defines the conditions for a document to be embedable.
@@ -23,7 +24,7 @@ module Jekyll
       # Returns true if the doc is written & is HTML.
       def embedable?(doc)
         (doc.is_a?(Jekyll::Page) || doc.write?) &&
-          doc.output_ext == ".html" || (doc.permalink && doc.permalink.end_with?("/"))
+            doc.output_ext == ".html" || (doc.permalink && doc.permalink.end_with?("/"))
       end
 
       private
