@@ -731,17 +731,37 @@ ol {
   }
 
   /* Video */
-
-  .video-background {
-    background-color: #827a7c;
-    // div {
-    //     display: inline-block;
-    // }
-    span {
-        color: white;
+  
+  .video-wrapper {
+    position: relative;
+    .box {
+      background: #f7f7f7;
+      border-bottom: none;
+    }
+    p {
+      font-size: 1.4em
     }
   }
 
+  #video-description-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 56.5%;
+    transform: translateY(-50%);
+  }
+
+  #video-divider-wrapper {
+    padding: 2em 10em 2em 10em;
+  }
+
+  #video-divider {
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+  }
+  
   /* Button */
 
   input[type="button"],
