@@ -146,40 +146,42 @@ p, ul, ol, dl, table {
   margin-bottom: 2em;
 }
 
-.actions {
-  margin-top: 2.5em;
+#banner {
+  display: none;
 }
 
 /* Video */
 
-.video-wrapper {
+#video-wrapper {
   position: relative;
+
   .box {
     background: #f7f7f7;
     border-bottom: none;
   }
+
   p {
     font-size: 1.4em
   }
-}
 
-#video-description-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 56.5%;
-  transform: translateY(-50%);
+  #video-description-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 56.5%;
+    transform: translateY(-50%);
+  }
 }
 
 #video-divider-wrapper {
-  padding: 2em 10em 2em 10em;
-}
+  padding: 2em;
 
-#video-divider {
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+  #video-divider {
+    height: 2px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #d52349, #f0f0f0);
+  }
 }
 
 /* Read more */
@@ -604,32 +606,43 @@ ol {
   }
 }
 
-/* Banner */
+/* Index Header */
 
-#banner {
-  background: #CCE8F4;
-  background-image: url(/images/sticky_rice_dc.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
+.page-- {
 
-  > div {
-    background-color: #252122;
-    background-color: rgba(34, 30, 31, 0.98);
-    padding: 40px 40px;
-
-    h2 {
-      color: #fff;
-      font-weight: 700;
-    }
-
-    p {
-      color: #d52349;
-      padding: 0;
-      font-style: normal;
-      margin: 0;
+  #header-wrapper {
+    background-image: url(/images/sticky_rice_dc.jpg);
+    #header {
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.8);
     }
   }
+
+  /* Banner */
+
+  #banner {
+    display: initial;
+    text-align: center;
+
+    > div {
+      padding: 2.5em;
+
+      h2 {
+        color: #d52349;
+        font-size: 2.5em;
+        font-weight: 700;
+      }
+
+      p {
+        color: #fff;
+        font-size: 1.7em;
+        padding: 1.2em;
+        font-style: normal;
+        margin: 0;
+      }
+    }
+  }
+
 }
 
 /* Wrappers */
@@ -638,14 +651,14 @@ ol {
   position: relative;
   background: #ffffff;
   border-bottom: solid 1px #ccc;
-
-  /* Header */
+  background-size: cover;
+  background-repeat: no-repeat;
 
   #header {
     text-align: center;
 
     .header-logo {
-      margin-bottom: 30px;
+      margin-bottom: 3em;
 
       > a {
         color: #252122;
@@ -666,6 +679,14 @@ ol {
       }
     }
   }
+}
+
+#nav-wrapper {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.9);
+  position: relative;
+  text-align: center;
+  padding: 2em 0 2em;
 }
 
 #main-wrapper {
@@ -719,6 +740,10 @@ ol {
   text-align: center;
 }
 
+#intro-actions {
+  margin-top: 2.5em;
+}
+
 /* Copyright */
 
 #copyright {
@@ -763,7 +788,7 @@ ol {
     }
 
     &.major {
-      margin: 0 0 3em 0;
+      margin: 0 0 3.5em 0;
     }
   }
 
@@ -858,12 +883,14 @@ ol {
 
   /* Wrappers */
 
-  #header-wrapper {
-    padding: 4.5em 0 4em 0;
-  }
-
   #main-wrapper {
     padding: 4em 0 4em 0;
+  }
+
+  /* Header */
+  
+  #header {
+    padding: 4.5em 0 4em 0;
   }
 
   /* Nav */
@@ -949,28 +976,6 @@ ol {
         border-right: solid 10px transparent;
         border-bottom: solid 10px #252122;
         border-bottom-color: rgba(34, 30, 31, 0.98);
-      }
-    }
-  }
-
-  /* Banner */
-
-  #banner {
-    position: relative;
-    padding: 8em 0;
-
-    > div {
-      display: inline-block;
-      border-radius: 5px;
-      max-width: 600px;
-
-      h2 {
-        font-size: 2.5em;
-        margin: 0 0 0.65em 0;
-      }
-
-      p {
-        font-size: 1.5em;
       }
     }
   }
@@ -1062,7 +1067,7 @@ ol {
 
   header{
     &.major {
-      margin: 0.75em 0 2.5em 0;
+      margin: 0.75em 0 3em 0;
 
       h2 {
         padding: 0 1em 0 1em;
@@ -1083,10 +1088,6 @@ ol {
 
   /* Wrappers */
 
-  #header-wrapper {
-    padding: 3em 0 3em 0;
-  }
-
   #main-wrapper {
     padding: 2.75em 0 2.75em 0;
   }
@@ -1095,14 +1096,16 @@ ol {
 
   #header {
     h1 {
-      margin: 0.25em 0 1em 0;
+      padding: 3em 0 3em 0;
     }
   }
 
-  /* Banner */
+  /* Header Index */
 
-  #banner {
-    padding: 6em 0;
+  .page-- {
+    #banner {
+      padding: 6em 0;
+    }
   }
 
   /* Intro */
@@ -1163,7 +1166,7 @@ ol {
   }
 
   header {
-    margin: 0 0 1em 0;
+    margin: 0 0 2em 0;
   }
 
   footer {
@@ -1296,7 +1299,7 @@ ol {
         font-size: 18px;
         color: #fff;
         text-align: center;
-        background: rgba(150, 150, 150, 0.75);
+        background: rgba(213, 35, 73, 0.75);
         border-radius: 5px;
       }
 
@@ -1394,12 +1397,13 @@ ol {
   }
 
   #header-wrapper {
-    padding: 2em 0;
+    margin-bottom: 2em;
 
     #header {
       text-align: center;
 
       .header-logo {
+        margin-top: 2em;
         margin-bottom: 0px;
       }
     }
@@ -1429,37 +1433,50 @@ ol {
 
   /* Header */
 
-  #header {
-    text-align: center;
+  #header-wrapper {
+    #header {
+      padding: 0.75em 4em 0 4em;
+      text-align: center;
 
-    h1 {
-      color: #252122;
-      font-weight: 900;
-      font-size: 1.75em;
-      letter-spacing: -0.035em;
+      h1 {
+        color: #252122;
+        font-weight: 900;
+        font-size: 1.75em;
+        letter-spacing: -0.035em;
+      }
+
+      #banner > div > p {
+        padding: 0.5em;
+      }
+
+      .header-logo > a > #header-logo-image {
+        max-width: 60%;
+      }
     }
   }
 
   /* Nav */
 
-  #nav {
+  #nav-wrapper {
     display: none;
   }
 
-  /* Banner */
+  /* Index Header */
 
-  #banner {
-    padding: 0;
-    > div {
-      background-color: rgba(34, 30, 31, 0.94);
-      padding: 6em 1em;
-      h2 {
-        font-size: 1.5em;
-        line-height: 1.5em;
-        margin: 0 0 0.25em 0;
-      }
-      p {
-        font-size: 1.2em;
+  .page-- {
+
+    #banner {
+      padding: 0;
+      > div {
+        padding: 3em 1em;
+        h2 {
+          font-size: 1.5em;
+          line-height: 1.5em;
+          margin: 0 0 0.25em 0;
+        }
+        p {
+          font-size: 1.2em;
+        }
       }
     }
   }
