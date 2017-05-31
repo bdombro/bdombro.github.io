@@ -266,7 +266,6 @@ header {
 
 .box {
   background: #ffffff;
-  border-bottom: solid 1px #ccc;
   .image.featured {
     position: relative;
     width: auto;
@@ -618,8 +617,11 @@ ol {
   #header-wrapper {
     background-image: url(/images/sticky_rice_dc.jpg);
     #header {
-      background: rgb(0, 0, 0);
       background: rgba(0, 0, 0, 0.8);
+      padding: 4.5em 0 4em 0;
+      .header-logo {
+        margin-bottom: 3em;
+      }
     }
   }
 
@@ -661,9 +663,9 @@ ol {
 
   #header {
     text-align: center;
+    background: rgb(0, 0, 0);
 
     .header-logo {
-      margin-bottom: 3em;
 
       > a {
         color: #252122;
@@ -895,7 +897,7 @@ ol {
   /* Header */
   
   #header {
-    padding: 4.5em 0 4em 0;
+    padding: 2em 0 2em 0;
   }
 
   /* Nav */
@@ -1404,8 +1406,7 @@ ol {
       text-align: center;
 
       .header-logo {
-        margin-top: 2em;
-        margin-bottom: 0px;
+        padding-bottom: 0.4em;
       }
     }
   }
