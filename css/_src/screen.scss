@@ -151,6 +151,10 @@ p, ul, ol, dl, table {
   display: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* Video */
 
 #video-wrapper {
