@@ -2,13 +2,20 @@
 layout: default
 ---
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
-	<div class="inner-hero text-container">
-		<div class="hero-text-container">
-			<h1>{{ page.title }}</h1>
-			<p class="subtext">{{ page.description }}</p>
+<div id="main-wrapper">
+
+	<div class="container">
+		<div class="row">
+
+		  <div class="12u">
+		  	<div class="box">
+		  		<h2>{{ page.title }}</h2>
+					<p>{{ page.description }}</p>
+		  	</div>
+		  </div>
+			
+			{{ content }}
+
 		</div>
 	</div>
-</section>
-
-{{ content }}
+</div>
