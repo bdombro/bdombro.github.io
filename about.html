@@ -4,11 +4,12 @@ description: We've built an amazing team of developers, marketers, designers and
 ---
 
 <div id="main-wrapper">
-	<div class="container">
+
+	<div class="container" id="about-page-wrapper">
 		<div class="row">
 
 			<!-- About -->
-			<div class="8u 12u(mobile)">
+			<div class="8u 12u(mobile) about">
 				<article class="box post">
 					<header>
 						<h2>Who are we?</h2>
@@ -38,16 +39,20 @@ description: We've built an amazing team of developers, marketers, designers and
 			</div>
 
 			<!-- Sidebar (right) -->
-			<div class="4u 12u(mobile)">
+			<div class="4u 12u(mobile) sidebar">
 				<section class="box">
-					<header>
-						<h3>Additional Content</h3>
-					</header>
-					<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-					<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-					<footer>
-						<a href="#" class="button alt">Sign Up</a>
-					</footer>
+					<div class="row">
+						<header>
+							<h3>Additional Content</h3>
+						</header>
+						<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+						<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+					</div>
+					<div class="row">
+						<footer class="12u 4u(mobile)">
+							<a href="#" class="button">Sign Up</a>
+						</footer>
+					</div>
 				</section>
 			</div>
 
@@ -55,7 +60,7 @@ description: We've built an amazing team of developers, marketers, designers and
 	</div>
 
 	<!-- Staff Members -->
-	<div class="container">
+	<div class="container staff">
 		<div class="row" style="padding-bottom: 2em;">
 			{% for person in site.staff_members %}
 				<div class="6u 12u(mobile)">
@@ -69,6 +74,6 @@ description: We've built an amazing team of developers, marketers, designers and
 				</div>
 			{% endfor %}
 		</div>
-
 	</div>
+
 </div>
