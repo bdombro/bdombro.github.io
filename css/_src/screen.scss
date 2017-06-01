@@ -185,8 +185,33 @@ img {
   color: #666;
   font-size: .9em;
   line-height: 2;
-  border: 1px solid #ddd;
-  border-radius: .25em;
+  border: 0;
+  border-radius: 5px;
+  background: #d52349;
+  color: #fff !important;
+  outline: 0;
+  line-height: 2.5em;
+  font-size: 1.1em;
+
+  &:hover {
+    background: #de7088;
+  }
+
+  &:active {
+    background: #c51349;
+  }
+
+  &.alt {
+    background: #252122;
+
+    &:hover {
+      background: #353132;
+    }
+
+    &:active {
+      background: #151112;
+    }
+  }
 }
 
 /* Section/Article */
@@ -252,7 +277,7 @@ button,
   @include vendor('transition', 'background-color .25s ease-in-out');
 
   &:hover {
-    background: #e53359;
+    background: #de7088;
   }
 
   &:active {
