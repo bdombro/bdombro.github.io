@@ -105,10 +105,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 a {
   color: #d52349;
   text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 br.clear {
