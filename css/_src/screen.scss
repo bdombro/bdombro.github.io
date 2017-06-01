@@ -756,7 +756,14 @@ ol {
   position: relative;
   color: #858484;
   background: #252122;
-  padding: 12px 20px 24px;
+
+  .row {
+    padding: 20px;
+  }
+
+  .footer-el-container {
+    padding-top: 0;
+  }
 
   a:not(.icon) {
     color: #c5c4c4;
