@@ -229,6 +229,11 @@ header {
   > p {
     display: block;
     font-style: italic;
+    font-size: 1.2em;
+  }
+
+  > h2 {
+    font-size: 1.8em;
   }
 
   &.major {
@@ -531,7 +536,6 @@ ol {
   }
 }
 
-
 /* Icons */
 
 .icon {
@@ -660,7 +664,13 @@ ol {
   }
 
   .intro {
-    header, p { margin-bottom: 0;}
+    header, p {
+      margin-bottom: 0;
+    }
+    
+    p {
+      margin-top: 0.8em;
+    }
   }
 
   .form-field {
@@ -686,6 +696,10 @@ ol {
       padding: 1em;
       line-height: 1.3em;
     }
+  }
+
+  .address {
+    font-size: 1.2em;
   }
 }
 
@@ -969,6 +983,12 @@ ol {
   }
 
   /* Wrappers */
+
+  #contact-page-wrapper {
+    #contact-form {
+      margin-top: 0;
+    }
+  }
 
   #main-wrapper {
     padding: 4em 0 0 0;
