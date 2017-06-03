@@ -833,6 +833,32 @@ ol {
   }
 }
 
+#blog-post-wrapper {
+  overflow: hidden;
+
+  img {
+    max-width: 25%;
+    margin: 2em 2em 2em 0;
+  }
+}
+
+#blog-index-wrapper {
+  .blog-article-container {
+    border-left: 1px black solid;
+    padding-left: 2em;
+  }
+  .row {
+    background: white;
+    margin-top: 1em;
+    padding-top: 1em;
+    margin-bottom: 2em;
+  }
+  .box {
+    background: none;
+    padding: 0;
+  }
+}
+
 /* Intro */
 
 #intro {
