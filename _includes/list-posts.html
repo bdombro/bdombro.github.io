@@ -1,16 +1,18 @@
 {% for post in include.posts %}
-	<li style="margin-bottom: 4em;">
-		<h2>
-		  <a href="{% include relative-src.html src=post.url %}">
-		    {{ post.title }}
-		  </a>
-		</h2>
-		{% include post-title.html post=post %}
-		<div>
-			{{ post.excerpt }}
-			<button href="{% include relative-src.html src=post.url %}">
-			  Read More
-			</button>
-		</div>
-	</li>
+	<div class="blog-article-container">
+		<li style="margin-bottom: 4em;">
+			<h2>
+			  <a href="{% include relative-src.html src=post.url %}">
+			    {{ post.title }}
+			  </a>
+			</h2>
+			{% include post-title.html post=post %}
+			<div>
+				{{ post.excerpt }}
+				<button href="{% include relative-src.html src=post.url %}">
+				  Read More
+				</button>
+			</div>
+		</li>
+	</div>
 {% endfor %}
