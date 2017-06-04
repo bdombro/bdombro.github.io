@@ -3,18 +3,12 @@
 
 title: DC Facades
 url: "https://dcfacades.com"
-baseurl:
-google_analytics_key:
-google_tag_manager_key:
-google_maps_javascript_api_key: AIzaSyDj-bVK8EaDmKmAAtNIuo1fvWLDTbLuLI0
-fb_app_id:
-disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
 description: Signs and Storefront Improvement Services
 author:
-  name: Brian Dombrowski
+  name: Benevolent Tech
   email: brian@benevolent.tech
   twitter: benevolentweb
 social:
@@ -54,14 +48,32 @@ collections:
 jekyll-mentions:
   base_url: https://twitter.com
 
-jekyll-youtube-embed:
-  base_url: https://youtube.com
-
 paginate: 10
 paginate_path: "/blog/:num/"
 
 jekyll-archives:
   enabled: ['categories']
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "contact-success.html"
+    values:
+      layout: "page"
+
+_comments:
+  description: Signs and Storefront Improvement Services
+  blurb: Signs and Storefront Improvement Services
 
 #algolia:
 #  application_id: 'MUZJLD13O2'
@@ -83,39 +95,3 @@ jekyll-archives:
 #  excluded_files:
 #      - seo-starter-spreadsheet-success.html
 #      - newsletter-success.html
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: "contact-success.html"
-    values:
-      layout: "page"
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - Email
-  - RSS
-
-_comments:
-  description: Signs and Storefront Improvement Services
-  blurb: Signs and Storefront Improvement Services
