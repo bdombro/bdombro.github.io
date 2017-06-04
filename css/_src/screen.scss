@@ -1048,17 +1048,12 @@ ol {
           outline: 0;
         }
 
-        &:hover, &.active {
-          > a {
-            background: #f3f3f3;
-          }
+        a:hover, a.active {
+          background: #f3f3f3;
         }
-
-        &.current {
-          > a {
-            background: #d52349;
-            color: #fff !important;
-          }
+        a.current {
+          background: #d52349;
+          color: #fff !important;
         }
       }
     }
