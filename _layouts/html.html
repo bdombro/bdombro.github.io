@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" class="page--{{ page.url | slice: 1,page.url.size | replace: '/','--' }}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="generator" content="Jekyll v{{ jekyll.version }}">
-		<meta property="fb:app_id" content="{{ site.fb_app_id }}">
+		<meta property="fb:app_id" content="">
 		<meta name="theme-color" content="#012559">
 
 		{% feed_meta %}
@@ -14,21 +14,50 @@
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.ico">
 		<link rel="manifest" href="/manifest.json">
-
 		{% seo %}
 
 		<!-- More info on JSON-LD at https://developers.google.com/search/docs/guides/intro-structured-data -->
 		<script type="application/ld+json">
 		  {
-		    "@context": "http://schema.org",
-		    "@type": "Organization",
-		    "url": "{{ site.baseurl }}",
-		    "contactPoint": [{
-		      "@type": "ContactPoint",
-		      "telephone": "+1-202-644-2237",
-		      "contactType": "leadership"
-		    }]
-		  }
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"url": "{{ site.baseurl }}",
+				"telephone": "+1-202-644-2237",
+				"email": "brian(at)benevolent.tech",
+				"sameAs" : [
+					"https://www.instagram.com/myhandle",
+					"https://twitter.com/myhandle",
+					"https://facebook.com/myhandle",
+					"https://www.linkedin.com/company/myhandle",
+					"https://www.yelp.com/biz/myhandle",
+					"https://member.angieslist.com/member/store/myhandle",
+					"https://angel.co/myhandle",
+					"https://github.com/myhandle",
+					"https://plus.google.com/+myhandle",
+					"https://clutch.co/profile/myhandle"
+				],
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "2316 Rhode Island Ave NE",
+					"postalCode": "20018",
+					"addressLocality": "Washington",
+					"addressRegion": "DC",
+					"addressCountry": "USA"
+				},
+				"location": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "2316 Rhode Island Ave NE",
+						"postalCode": "20018",
+						"addressLocality": "Washington",
+						"addressRegion": "DC",
+						"addressCountry": "USA"
+					},
+					"url": ""
+				}
+
+			}
 	  </script>
 
 		<!--{% include register-service-worker.html %}-->
