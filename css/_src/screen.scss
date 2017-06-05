@@ -779,6 +779,14 @@ ol {
   position: relative;
   text-align: center;
   padding: 2em 0 2em;
+
+  // #header-search-icon-a { margin-left: -10px;}
+
+  #header-search-icon-a svg {
+    fill: #5d5d5d;
+    // transition: 0.2s ease-in-out;
+  }
+
 }
 
 #main-wrapper {
