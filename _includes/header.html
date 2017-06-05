@@ -27,7 +27,11 @@
         {% for link in site.data.navigation %}
 
           <li>
-            <a href="{{ site.baseurl }}{{ link.link }}" {% if link.link == page.url %}class="current"{% endif %}>
+            <a href="{{ site.baseurl }}{{ link.link }}"
+              {% if link.link == page.url %}
+                class="current"
+              {% endif %}
+            >
               {{ link.name }}
             </a>
           </li>
