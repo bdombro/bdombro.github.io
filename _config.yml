@@ -48,7 +48,7 @@ collections:
 jekyll-mentions:
   base_url: https://twitter.com
 
-paginate: 5
+paginate: 3
 paginate_path: "/blog/:num/"
 
 jekyll-archives:
