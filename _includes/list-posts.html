@@ -21,10 +21,10 @@
 <!-- Pagination -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous" style="margin-right: 0.4em;">Previous</a>
   {% endif %}
   <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path }}" class="next" style="margin-left: 0.4em;">Next</a>
   {% endif %}
 </div>
