@@ -91,13 +91,15 @@ description: Signs and Storefront Improvement Services
 							<section class="box">
 								<a href="#" class="image featured"><img height="280" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" /></a>
 								<header>
+								  {% assign first_article = site.posts.first %}
 								  <a href="#">
-									  <h3>Featured 1</h3>
+									  <h3>{{ first_article.title }}</h3>
 									</a>
 								</header>
 								<div>
 									<input type="checkbox" class="read-more-state" id="post-1" />
-									<p class="read-more-wrapper">Lorem ipsum dolor sit amet sit veroeros sed  et blandit consequat sed veroeros lorem et blandit <span class="read-more-target"> adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</span></p>
+									<p class="read-more-wrapper">
+										{{ first_article.excerpt }} <span class="read-more-target"> {{ first_article.more}}</span></p>
 								  <label for="post-1" class="read-more-trigger"></label>
 								</div>
 							</section>
@@ -106,13 +108,15 @@ description: Signs and Storefront Improvement Services
 							<section class="box">
 								<a href="#" class="image featured"><img height="280" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" /></a>
 								<header>
+								  {% assign second_article = site.posts[1] %}
 								  <a href="#">
-									  <h3>Featured 2</h3>
+									  <h3>{{ second_article.title }}</h3>
 									</a>
 								</header>
 								<div>
 									<input type="checkbox" class="read-more-state" id="post-2" />
-									<p class="read-more-wrapper">Lorem ipsum dolor sit amet sit veroeros sed  et blandit consequat sed veroeros lorem et blandit <span class="read-more-target"> adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</span></p>
+									<p class="read-more-wrapper">
+										{{ second_article.excerpt }} <span class="read-more-target"> {{ second_article.more}}</span></p>
 								  <label for="post-2" class="read-more-trigger"></label>
 								</div>
 							</section>
