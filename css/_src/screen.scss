@@ -682,10 +682,13 @@ ol {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.9);
   position: relative;
-  text-align: center;
+  // text-align: center;
   padding: 2em 0 2em;
 
-  // #header-search-icon-a { margin-left: -10px;}
+  #nav {
+    display: flex;
+    justify-content: center;
+  }
 
   #header-search-icon-a svg {
     fill: #5d5d5d;
