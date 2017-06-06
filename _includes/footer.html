@@ -4,7 +4,13 @@
 
     <div class="6u hidden-mobile-block footer-el-container">
       <section class="footer-links">
-        <a href="/">Home</a> - <a href="javascript:void(0);">About</a> - <a href="javascript:void(0);">Work</a> - <a href="javascript:void(0);">Awards</a> - <a href="javascript:void(0);">Contact</a>
+
+        {% for link in site.data.navigation %}
+          <a href="{{ site.baseurl }}{{ link.link }}" style="padding-right: 1em;">
+            {{ link.name }}
+          </a>
+        {% endfor %}
+
       </section>
     </div>
 
