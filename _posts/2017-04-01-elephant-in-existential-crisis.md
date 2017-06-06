@@ -2,7 +2,7 @@
 title: Elephant in Existential Crisis
 date: 2017-04-01
 description: Plot of Horton Hear's a Who (Wikipedia)
-excerpt: A dust speck is dislodged from its obscure place and sent adrift through the Jungle of Nool.
+shortened_excerpt: A dust speck is dislodged from its obscure place and sent adrift through the Jungle of Nool.
 more: At the same time, Horton the elephant (Jim Carrey), the jungle's eccentric nature teacher, takes a dip in the pool. The dust speck floats past him in the air, and he hears a tiny yelp coming from it.
 categories:
   - entertainment

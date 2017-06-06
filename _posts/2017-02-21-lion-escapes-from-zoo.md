@@ -2,7 +2,7 @@
 title: Lion Escapes from Zoo
 date: 2017-04-01
 description: Plotline of Madagascar (Wikipedia)
-excerpt: At the Central Park Zoo, Marty the zebra is celebrating his tenth birthday, but has grown bored with his daily routine and longs to experience the wild. 
+shortened_excerpt: At the Central Park Zoo, Marty the zebra is celebrating his tenth birthday, but has grown bored with his daily routine and longs to experience the wild. 
 more: Marty's best friend is Alex the lion, who enjoys showing off for the public and his celebrity status as "the king of New York".
 categories:
   - entertainment
