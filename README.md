@@ -1,12 +1,8 @@
-# Frisco
+# BT Jekyll Boilerplate
 
-App promotion themed template for Jekyll. Browse through a [live demo](https://brave-submarine.cloudvent.net/).
-Increase the web presence of a App with this configurable theme.
+Text coming soon
 
-![Frisco template screenshot](images/_screenshot.jpg)
-
-Frisco was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
-Find more templates and themes at [Jekyll Tips](http://jekyll.tips/templates/).
+![template screenshot](images/screenshot.fold.jpg)
 
 Learn Jekyll with step-by-step tutorials and videos at [Jekyll Tips](http://jekyll.tips/).
 
@@ -32,8 +28,6 @@ Learn Jekyll with step-by-step tutorials and videos at [Jekyll Tips](http://jeky
 3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
 
 ## Develop
-
-Frisco was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
 Install the dependencies with [Bundler](http://bundler.io/):
 
