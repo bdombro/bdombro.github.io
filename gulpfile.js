@@ -138,14 +138,14 @@ gulp.task('js-production', ['js-libs', 'js-custom'], function (cb) {
 
 gulp.task('jekyll-build', ['css', 'js-production'], function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ bundle exec jekyll build');
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
     .on('close', done);
 });
 
 
 gulp.task('jekyll-rebuild', function (done) {
   // return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
       .on('close', function () {
         browserSync.reload();
         return done();
