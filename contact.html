@@ -1,110 +1,45 @@
 ---
 title: Contact
+map:
+  latitude: 38.930874
+  longitude: -76.972874
+  address: "2316 Rhode Island Ave NE, Washington DC 20018"
+  zoom: 13
 ---
 
-<div id="main-wrapper">
-	<div class="container" id="contact-page-wrapper">
-		<div class="row">
-			
-			<!-- Intro -->
-			<div class="4u 12u(mobile) intro">
-				<article class="box post">
-					<header>
-					  <h2 class="editable">Get in touch</h2>
-					  <p class="editable">If you have any questions or queries send us a message and we'll get back to you as soon as we can.</p>
-					</header>
-				</article>
-			</div>
+<form action="" method="post">
+  <input type="hidden" name="_to" value="hi@benevolent.tech"/>
+  <input type="text" name="_gotcha" style="display: none;"/>
 
-      <!-- Contact Form -->
-      <div class="8u 12u(mobile)">
-        <div class="box" id="contact-form">
-          <form action="" method="post">
-            <input type="hidden" name="_to" value="info@suncesailing.com"/>
-            <input type="text" name="_gotcha" style="display: none;"/>
-            
-            <div class="row form-field">
-              <div class="4u 12u(mobile)">
-                <input type="text" name="fname" placeholder="First Name"/>
-                <input type="text" name="lname" placeholder="Last Name"/>
-                <input type="email" name="email" placeholder="Email"/>
-                <input type="tel" name="phone" placeholder="Phone"/>
-              </div>
-              <div class="8u 11u(mobile)">
-                <textarea type="text" name="message" placeholder="Message"></textarea>
-              </div>
-            </div>
+  <div class="row form-field">
+    <input type="text" name="fname" placeholder="First Name"/>
+    <input type="text" name="lname" placeholder="Last Name"/>
+    <input type="email" name="email" placeholder="Email"/>
+    <input type="tel" name="phone" placeholder="Phone"/>
+    <textarea type="text" name="message" placeholder="Message"></textarea>
+  </div>
 
-            <div class="row">
-              <div class="4u">
-                <input type="submit" value="Send"/>
-              </div>
-            </div>
+  <div class="row">
+    <input type="submit" value="Send"/>
+  </div>
 
-          </form>
-        </div>
-      </div>
+</form>
+<br><br>
 
-		</div>
+<!-- Map -->
+<div class="row map">
+  <div id="gmap_canvas" style="height:300px;"></div>
+</div>
 
-    <!-- Map -->
-    <div class="row map">
-      <div id="gmap_canvas"></div>
-    </div>
+<!-- Address(es) -->
+<div class="row address">
+  <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">	<!--{{ page.map.address | replace: ", ", ", <br>" }}-->
+    Benevolent Tech HQ<br>2316 Rhode Island Ave NE<br>Washington DC 20018
+  </a></address><br>
 
-    <!-- Address(es) -->
-    <div class="row address">
-      <div class="4u 12u(mobile)">
-        {% assign address = "https://goo.gl/maps/fkyfyqU6CTR2" %}
-        <div class="box address">
-          <p class="editable">
-            <a href="{{ address }}">Hair Beards and Beer</a>
-          </p>
-          <p class="editable">
-            <a href="{{ address }}">2316 Rhode Island Ave NE</a>
-          </p>
-          <p class="editable">
-            <a href="{{ address }}">Washington DC 20018</a>
-          </p>
-        </div>
-      </div>
-      <div class="4u 6u(mobile)">
-        <div class="box">
-          <p class="editable">
-            Main
-          </p>
-          <p class="editable">
-            (121) 121-1211
-          </p>
-          <br>
-          <p class="editable">
-            Fax
-          </p>
-          <p class="editable">
-            (232) 232-2222
-          </p>
-        </div>
-      </div>
-      <div class="4u 6u(mobile)">
-        <div class="box">
-          <p class="editable">
-            The Hair Line
-          </p>
-          <p class="editable">
-            (434) 434-4343
-          </p>
-          <br>
-          <p class="editable">
-            The Beer Line
-          </p>
-          <p class="editable">
-            (512) 512-5124
-          </p>
-        </div>
-      </div>
-    </div>
+</div>
 
-	</div>
+</div>
 </div>
 
 <!-- Map Script -->
@@ -117,7 +52,11 @@ title: Contact
       draggable: false,
       panControl: false,
       disableDefaultUI: true,
-      styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
+      styles: [{"featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{"color": "#f7f1df"}]}, {"featureType": "landscape.natural", "elementType": "geometry", "stylers": [{"color": "#d0e3b4"}]}, {"featureType": "landscape.natural.terrain", "elementType": "geometry", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.business", "elementType": "all", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.medical", "elementType": "geometry", "stylers": [{"color": "#fbd3da"}]}, {"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#bde6ab"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffe15f"}]}, {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [{"color": "#efd151"}]
+      }, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.local", "elementType": "geometry.fill", "stylers": [{"color": "black"}]}, {"featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{"color": "#cfb2db"}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#a2daf2"}]}],
       zoom: window.mapData.zoom,
       maxZoom: window.mapData.zoom,
       minZoom: window.mapData.zoom,
@@ -135,4 +74,4 @@ title: Contact
     });
   }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKMKUAB7EOak_dTHHeUX8N0MNuYRFh_Ik&amp;callback=initMap"></script>

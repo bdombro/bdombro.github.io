@@ -2,27 +2,5 @@
 title: Blog
 ---
 
-<div id="main-wrapper">
-	<div class="container" id="blog-index-wrapper">
-		<div class="row">
-
-			<div class="2u 3u(mobile)">
-				<div class="box">
-					<h2 class="editable" style="text-align: right;">News</h2>
-				</div>
-			</div>
-
-			<!-- Articles -->
-		  <div class="10u 9u(mobile)">
-		    <div class="box">
-
-				<ul>
-					{% include list-posts.html posts = paginator.posts %}
-				</ul>
-
-		    </div>
-		  </div>
-
-		</div>
-	</div>
-</div>
+Blogs:
+{% include list-posts.html posts = paginator.posts %}

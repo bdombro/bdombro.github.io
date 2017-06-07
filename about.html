@@ -3,66 +3,12 @@ title: About
 description: We've built an amazing team of developers, marketers, designers and sales people.
 ---
 
-<div id="main-wrapper">
-	<div id="about-page-wrapper">
+About Contents here.<br><br>
 
-		<div class="container" id="about-wrapper">
-			<div class="row">
-
-				<!-- About -->
-				<div class="8u 12u(mobile) about">
-					<article class="box post">
-						<header>
-							<h2>Who are we?</h2>
-						</header>
-							<header>
-								<h3>Hair Beards and Beer</h3>
-							</header>
-							<p>
-								We're a veteran group of hair and beer experts. Mops, buzzes, pompadours, lagers, wheat, stouts - we can handle all types of hair and all types of beer. Things have changed a lot since you turned 5. Scissors aren't as scary and barbershops serve beer now. Come chill out and have a cold one.
-							</p>
-						</section>
-					</article>
-				</div>
-
-				<!-- Sidebar (right) -->
-				<div class="4u 12u(mobile) sidebar">
-					<section class="box">
-						<div class="row">
-							<header>
-								<h3>Why bother?</h3>
-							</header>
-							<p>You'll look and feel better after we've wrangled your tangle. Have a seat, grab a brew, lose a few hairs.</p>
-						</div>
-						<div class="row">
-							<footer class="12u 4u(mobile)">
-								<a href="/contact" class="button">Come hang out</a>
-							</footer>
-						</div>
-					</section>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Staff Members -->
-		<div class="container staff">
-			<div class="row" style="padding-bottom: 2em;">
-				{% for person in site.staff_members %}
-					<div class="4u 12u(mobile)">
-					  <div class="box">
-							<div class="image featured">
-							  <img src="/images/woman.png" alt="author: Freepik"/>
-							</div>
-							<div style="text-align: center;">
-								<p>{{person.name}}</p>
-								<p>{{person.position}}</p>
-							</div>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-		</div>
-
-	</div>
-</div>
+Staff:<br>
+{% for person in site.staff_members %}
+<img src="/images/woman.png" alt="author: Freepik"/>
+<p>{{person.name}}</p>
+<p>{{person.position}}</p>
+<br>
+{% endfor %}

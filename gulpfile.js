@@ -86,11 +86,7 @@ gulp.task('js-libs', function (cb) {
   pump([
       gulp.src([
         'js/_src/libs/smooth-scroll.js',
-        'js/_src/libs/echo.js',
-        'js/_src/libs/jquery.js',
-        'js/_src/libs/jquery.dropotron.js',
-        'js/_src/libs/skel.js',
-        'js/_src/libs/skel-viewport.js'
+        'js/_src/libs/echo.js'
       ]),
       sourcemaps.init(),
       concat('libs.min.js'),
@@ -107,7 +103,6 @@ gulp.task('js-libs', function (cb) {
 gulp.task('js-custom', function (cb) {
   pump([
       gulp.src([
-        'js/_src/util.js',
         'js/_src/main.js'
       ]),
       sourcemaps.init(),
@@ -149,7 +144,8 @@ gulp.task('jekyll-build', ['css', 'js-production'], function (done) {
 
 
 gulp.task('jekyll-rebuild', function (done) {
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+  // return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
       .on('close', function () {
         browserSync.reload();
         return done();
