@@ -1,22 +1,52 @@
 ---
 layout: default
 ---
+{% assign page_category = page.title %}
 
-<section class="hero" style="background-image: url(https://source.unsplash.com/MqJX_8EaStM/2000x1322)">
-	<div class="inner-hero text-container">
-		<div class="hero-text-container">
-			<h1>The latest news</h1>
-			<p class="subtext">Hear the latest progress on Frisco and tips on making life long friends.</p>
+<div id="main-wrapper">
+	<div class="container" id="blog-index-wrapper">
+		<div class="row">
+
+			<div class="2u 3u(mobile)">
+				<div class="box">
+					<h3 class="editable" style="text-align: right;">{{ page_category | capitalize }}</h3>
+				</div>
+			</div>
+
+			<!-- Articles -->
+		  <div class="10u 9u(mobile)">
+		    <div class="box">
+
+					<ul>
+
+						{% for post in site.posts %}
+						  {% for category in post.categories %}
+								{% if category == page_category %}
+									<div class="blog-article-container">
+								    <li style="margin-bottom: 4em;">
+								      <h2>
+											  <a href="{{ post.url }}">
+											    {{ post.title }}
+											  </a>
+											</h2>
+											{% include post-title.html post=post %}
+											<div>
+												{{ post.excerpt }}
+												<a href="{{ post.url }}"><button>
+												  Read More
+												</button></a>
+											</div>
+								    </li>
+								  </div>
+								{% endif %}
+						  {% endfor %}
+						{% endfor %}
+
+					</ul>
+
+		    </div>
+		  </div>
+
 		</div>
 	</div>
-</section>
-
-<section>
-	<div class="text-container">
-		<p class="change-category">You're currently looking at advice categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
-
-		<ul class="blog-posts">
-			{% include list-posts.html posts=page.posts %}
-		</ul>
-	</div>
-</section>
+</div>

@@ -1,0 +1,54 @@
+#contact-page-wrapper {
+  .box {
+    margin-bottom: 1.5em;
+    margin-top: -1em;
+    background: none;
+  }
+
+  .address {
+    margin-bottom: 2em;
+    p {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .intro {
+    header, p {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0.8em;
+    }
+  }
+
+  .form-field {
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #e53359;
+    }
+
+    input, textarea {
+      border: 1.5px solid #5d5d5d;
+      border-radius: 0.25em;
+    }
+
+    input {
+      padding-right: 0.6em;
+      padding-left: 0.6em;
+      margin-bottom: 1em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 11.5em;
+      padding: 1em;
+      line-height: 1.3em;
+    }
+  }
+
+  .address {
+    font-size: 1.2em;
+  }
+}

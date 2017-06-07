@@ -4,76 +4,65 @@ description: We've built an amazing team of developers, marketers, designers and
 ---
 
 <div id="main-wrapper">
+	<div id="about-page-wrapper">
 
-	<div class="container" id="about-page-wrapper">
-		<div class="row">
+		<div class="container" id="about-wrapper">
+			<div class="row">
 
-			<!-- About -->
-			<div class="8u 12u(mobile) about">
-				<article class="box post">
-					<header>
-						<h2>Who are we?</h2>
-					</header>
-					<header>
-						<h3>Humans</h3>
-					</header>
-					<p>
-						Vestibulum scelerisque ultricies libero id hendrerit. Vivamus malesuada quam faucibus ante dignissim auctor
-						hendrerit libero placerat. Nulla facilisi. Proin aliquam felis non arcu molestie at accumsan turpis commodo.
-						Proin elementum, nibh non egestas sodales, augue quam aliquet est, id egestas diam justo adipiscing ante.
-						Pellentesque tempus nulla non urna eleifend ut ultrices nisi faucibus.
-					</p>
-					<section>
+				<!-- About -->
+				<div class="8u 12u(mobile) about">
+					<article class="box post">
 						<header>
-							<h3>Cyborgs</h3>
+							<h2>Who are we?</h2>
 						</header>
-						<p>
-							Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
-							placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
-							eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
-							elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-							sit amet nullam consequat feugiat dolore tempus.
-						</p>
+							<header>
+								<h3>Hair Beards and Beer</h3>
+							</header>
+							<p>
+								We're a veteran group of hair and beer experts. Mops, buzzes, pompadours, lagers, wheat, stouts - we can handle all types of hair and all types of beer. Things have changed a lot since you turned 5. Scissors aren't as scary and barbershops serve beer now. Come chill out and have a cold one.
+							</p>
+						</section>
+					</article>
+				</div>
+
+				<!-- Sidebar (right) -->
+				<div class="4u 12u(mobile) sidebar">
+					<section class="box">
+						<div class="row">
+							<header>
+								<h3>Why bother?</h3>
+							</header>
+							<p>You'll look and feel better after we've wrangled your tangle. Have a seat, grab a brew, lose a few hairs.</p>
+						</div>
+						<div class="row">
+							<footer class="12u 4u(mobile)">
+								<a href="/contact" class="button">Come hang out</a>
+							</footer>
+						</div>
 					</section>
-				</article>
-			</div>
+				</div>
 
-			<!-- Sidebar (right) -->
-			<div class="4u 12u(mobile) sidebar">
-				<section class="box">
-					<div class="row">
-						<header>
-							<h3>Additional Content</h3>
-						</header>
-						<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-						<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-					</div>
-					<div class="row">
-						<footer class="12u 4u(mobile)">
-							<a href="#" class="button">Sign Up</a>
-						</footer>
-					</div>
-				</section>
 			</div>
-
 		</div>
-	</div>
 
-	<!-- Staff Members -->
-	<div class="container staff">
-		<div class="row" style="padding-bottom: 2em;">
-			{% for person in site.staff_members %}
-				<div class="6u 12u(mobile)">
-				  <div class="box">
-						<a href="#" class="image featured"><img height="280" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" /></a>
-						<div style="text-align: center;">
-							<p>{{person.name}}</p>
-							<p>{{person.position}}</p>
+		<!-- Staff Members -->
+		<div class="container staff">
+			<div class="row" style="padding-bottom: 2em;">
+				{% for person in site.staff_members %}
+					<div class="4u 12u(mobile)">
+					  <div class="box">
+							<div class="image featured">
+							  <img src="/images/woman.png" alt="author: Freepik"/>
+							</div>
+							<div style="text-align: center;">
+								<p>{{person.name}}</p>
+								<p>{{person.position}}</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
-	</div>
 
+	</div>
 </div>

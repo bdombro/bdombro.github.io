@@ -8,7 +8,17 @@ layout: page
   	<!-- Title -->
 		<div>
 	    <h2>{{ page.title }}</h2>
-			<p>{{ page.description }}</p>
+			<p style="font-style: italic; margin-bottom: 1em;">
+			  {{ page.description }}
+			</p>
+			<p style="margin-bottom: 0;">
+			  By: {{ page.author_staff_member }}
+			</p>
+			<p style="margin-bottom: 2em;">
+				{% for category in page.categories %}
+				  <a>{{ category | capitalize }}</a>
+				{% endfor %}
+			</p>
 		</div>
 
 		<!-- Post -->

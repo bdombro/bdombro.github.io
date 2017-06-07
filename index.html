@@ -23,9 +23,9 @@ description: Signs and Storefront Improvement Services
 					</svg>
 				</div>
 				<header>
-					<h2>What</h2>
+					<h2>Hair</h2>
 				</header>
-				<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+				<p>Don't become a victim of time. Sit down with us before the mop takes over.</p>
 			</section>
 		</div>
 		<div class="4u 12u(mobile)">
@@ -42,9 +42,9 @@ description: Signs and Storefront Improvement Services
 					</svg>
 				</div>
 				<header>
-					<h2>Where</h2>
+					<h2>Beard</h2>
 				</header>
-				<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+				<p>Your face is as important as your head. We'll make you smoochable again.</p>
 			</section>
 		</div>
 		<div class="4u 12u(mobile)">
@@ -61,9 +61,9 @@ description: Signs and Storefront Improvement Services
 					</svg>
 				</div>
 				<header>
-					<h2>Who</h2>
+					<h2>Beer</h2>
 				</header>
-				<p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+				<p>That's right - you get a cold one while you chill out. Our Beer master keeps local flavors on tap.</p>
 			</section>
 		</div>
 	</div>
@@ -89,15 +89,17 @@ description: Signs and Storefront Improvement Services
 					<div class="row">
 						<div class="6u 12u(mobile)">
 							<section class="box">
+							  {% assign first_post = site.posts.first %}
 								<a href="#" class="image featured"><img height="280" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" /></a>
 								<header>
 								  <a href="#">
-									  <h3>Featured 1</h3>
+									  <h3>{{ first_post.title }}</h3>
 									</a>
 								</header>
 								<div>
 									<input type="checkbox" class="read-more-state" id="post-1" />
-									<p class="read-more-wrapper">Lorem ipsum dolor sit amet sit veroeros sed  et blandit consequat sed veroeros lorem et blandit <span class="read-more-target"> adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</span></p>
+									<p class="read-more-wrapper">
+										{{ first_post.shortened_excerpt }} <span class="read-more-target"> {{ first_post.more}}</span></p>
 								  <label for="post-1" class="read-more-trigger"></label>
 								</div>
 							</section>
@@ -106,13 +108,15 @@ description: Signs and Storefront Improvement Services
 							<section class="box">
 								<a href="#" class="image featured"><img height="280" src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" /></a>
 								<header>
+								  {% assign second_post = site.posts[1] %}
 								  <a href="#">
-									  <h3>Featured 2</h3>
+									  <h3>{{ second_post.title }}</h3>
 									</a>
 								</header>
 								<div>
 									<input type="checkbox" class="read-more-state" id="post-2" />
-									<p class="read-more-wrapper">Lorem ipsum dolor sit amet sit veroeros sed  et blandit consequat sed veroeros lorem et blandit <span class="read-more-target"> adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</span></p>
+									<p class="read-more-wrapper">
+										{{ second_post.shortened_excerpt }} <span class="read-more-target"> {{ second_post.more}}</span></p>
 								  <label for="post-2" class="read-more-trigger"></label>
 								</div>
 							</section>
@@ -130,6 +134,7 @@ description: Signs and Storefront Improvement Services
             <!-- player -->
             <div class="6u 12u(mobile)">
               <section class="box">
+              	<!-- https://www.youtube.com/watch?v=aZ3Mcbn8zyo has bars-->
                 <p class="video-4-3">https://www.youtube.com/watch?v=NTIcJ_tdEJM</p>
               </section>
             </div>
