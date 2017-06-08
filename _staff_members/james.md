@@ -1,7 +1,7 @@
 ---
 name: James Lopez
-position: Barber
-image_path: https://source.unsplash.com/collection/139386/603x603?a=.png
-twitter_username: CloudCannonApp
+position: Developer
+image_path: /images/woman-square.jpg
+twitter_username: BenevolentWeb
 blurb: James spends his weekends watching his favourite NBA team - L.A. Clippers.
 ---
