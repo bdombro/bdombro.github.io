@@ -3,50 +3,32 @@ layout: default
 ---
 {% assign page_category = page.title %}
 
-<div id="main-wrapper">
-	<div class="container" id="blog-index-wrapper">
-		<div class="row">
+<section>
+  <ul>
 
-			<div class="2u 3u(mobile)">
-				<div class="box">
-					<h3 class="editable" style="text-align: right;">{{ page_category | capitalize }}</h3>
-				</div>
-			</div>
+    {% for post in site.posts %}
+    {% for category in post.categories %}
+    {% if category == page_category %}
+    <li style="margin-bottom: 4em;">
+      <h2>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+      {% include post-title.html post=post %}
+      <div>
+        {{ post.excerpt }}
+        <a href="{{ post.url }}">
+          <button>
+            Read More
+          </button>
+        </a>
+      </div>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
 
-			<!-- Articles -->
-		  <div class="10u 9u(mobile)">
-		    <div class="box">
+  </ul>
 
-					<ul>
-
-						{% for post in site.posts %}
-						  {% for category in post.categories %}
-								{% if category == page_category %}
-									<div class="blog-article-container">
-								    <li style="margin-bottom: 4em;">
-								      <h2>
-											  <a href="{{ post.url }}">
-											    {{ post.title }}
-											  </a>
-											</h2>
-											{% include post-title.html post=post %}
-											<div>
-												{{ post.excerpt }}
-												<a href="{{ post.url }}"><button>
-												  Read More
-												</button></a>
-											</div>
-								    </li>
-								  </div>
-								{% endif %}
-						  {% endfor %}
-						{% endfor %}
-
-					</ul>
-
-		    </div>
-		  </div>
-
-		</div>
-	</div>
-</div>
+</section>
