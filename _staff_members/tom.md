@@ -1,7 +1,7 @@
 ---
 name: Tom Wilson
-position: Beer Master
-image_path: https://source.unsplash.com/collection/139386/605x605?a=.png
-twitter_username: CloudCannonApp
+position: CTO
+image_path: /images/woman-square.jpg
+twitter_username: BenevolentWeb
 blurb: Tom likes to travel and has visited over 50 countries.
 ---
