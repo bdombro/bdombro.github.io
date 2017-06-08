@@ -1,6 +1,6 @@
 <!-- Footer -->
-<div id="footer-wrapper">
-    <section class="footer-links-left">
+<footer id="footer-wrapper">
+    <div class="footer-links-left">
 
       {% for link in site.data.footer.left_links %}
         <a href="{{ site.baseurl }}{{ link.link }}" style="padding-right: 1em;">
@@ -8,9 +8,9 @@
         </a>
       {% endfor %}
 
-    </section>
+    </div>
 
-    <section class="footer-links-right">
+    <div class="footer-links-right">
 
       {% for link in site.data.footer.right_links %}
       <a href="{{ site.baseurl }}{{ link.link }}" style="padding-right:1em; text-decoration:none;">
@@ -18,6 +18,6 @@
       </a>
       {% endfor %}
 
-    </section>
-</div>
+    </div>
+</footer>
 
