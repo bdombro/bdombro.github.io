@@ -145,7 +145,7 @@ gulp.task('jekyll-build', ['css', 'js-production'], function (done) {
 
 gulp.task('jekyll-rebuild', function (done) {
   // return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
       .on('close', function () {
         browserSync.reload();
         return done();
