@@ -6,7 +6,7 @@ shortened_excerpt: At the Central Park Zoo, Marty the zebra is celebrating his t
 more: Marty's best friend is Alex the lion, who enjoys showing off for the public and his celebrity status as "the king of New York".
 categories:
   - grooming
-image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
+image: /images/beer.jpg
 author_staff_member: Luke Todd
 ---
 There’s an old saying that if you eat a live frog first thing each morning, you’ll have the satisfaction of knowing it’s probably the worst thing you’ll do all day. Not so if you’re Louise Cantwell.

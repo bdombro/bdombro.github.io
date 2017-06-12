@@ -27,10 +27,10 @@ gulp.task('optimize-images', function () {
 // });
 
 // Shortcut for pushing algolia search index
-// gulp.task('algolia-push', ['build-all'], function (done) {
-//   cp.spawn('bundle', ['exec', 'jekyll', 'algolia', 'push'], {stdio: 'inherit'})
-//     .on('close', done);
-// });
+gulp.task('algolia-push', ['build-all'], function (done) {
+  cp.spawn('bundle', ['exec', 'jekyll', 'algolia', 'push'], {stdio: 'inherit'})
+    .on('close', done);
+});
 
 
 // Starts a webserver, takes a snapshot, closes webserver, optimizes snapshot
