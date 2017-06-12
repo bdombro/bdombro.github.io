@@ -11,7 +11,7 @@ module Jekyll
     class << self
       def Lazyify(doc)
         return unless doc.output.include?("<img")
-        doc.output = doc.output.gsub(/(<img.*) src=(")(.*)(") (?!data-echo)(.*>)/, '\1 src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="" data-echo="\3" \5')
+        doc.output = doc.output.gsub(/(?!.*data-echo)(<img.*) src=("|')(.*)("|')(.*>)/, '\1 src="data:image/png;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-echo="\3" \5')
       end
 
       # Public: Defines the conditions for a document to be Lazyable.
