@@ -10,7 +10,7 @@ more: But with a steady slew of launches each month, and others adding to our bu
 categories:
   - grooming
   - hair
-image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
+image: /images/beard.jpg
 author_staff_member: Al Hardacre
 ---
 

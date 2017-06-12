@@ -1,25 +1,25 @@
 # ----
 # Site
 
-title: DC Facades
-url: "https://dcfacades.com"
+title: Master Prototype
+url: "https://benevolent.tech"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Signs and Storefront Improvement Services
+description: This is the site description
 author:
   name: Benevolent Tech
   email: brian@benevolent.tech
   twitter: benevolentweb
 social:
-  name: DC Facades
+  name: Benevolent Tech
   links:
     - https://benevolent.tech
 
 # -----
 # Build
 
-permalink: /blog/:title.html
+permalink: /post/:title.html
 
 gems:
   - jekyll-sitemap
@@ -29,7 +29,8 @@ gems:
   - jekyll_image_encode
   - jekyll-sitemap
   - jekyll-mentions
-  # - algoliasearch-jekyll
+  - jekyll-paginate
+  - algoliasearch-jekyll
 
 exclude:
   - Gemfile
@@ -72,26 +73,29 @@ defaults:
       layout: "page"
 
 _comments:
-  description: Signs and Storefront Improvement Services
-  blurb: Signs and Storefront Improvement Services
+  description: This is the comment description
+  blurb: This is the site description
 
-#algolia:
-#  application_id: 'MUZJLD13O2'
-#  index_name:     'Benevolent Tech Main'
-#  record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
-#  settings:
-#      attributesToIndex:
-#        - title
-#        - h1
-#        - h2
-#        - h3
-#        - h4
-#        - h5
-#        - h6
-#        - unordered(text)
-#        - unordered(tags)
-#        - ul
-#        - ol
-#  excluded_files:
-#      - seo-starter-spreadsheet-success.html
-#      - newsletter-success.html
+algolia:
+  application_id: 'MXFG5KRPB4'
+  searchonly_api_key: '915e9c731ef75764d72b6f4da44ada7d'
+  index_name:     'Main'
+  record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
+  settings:
+      attributesToIndex:
+        - title
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - unordered(text)
+        - unordered(tags)
+        - ul
+        - ol
+  excluded_files:
+      - blog
+      - blog/*
+      - search.html
+      - contact-success.html

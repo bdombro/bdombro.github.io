@@ -10,7 +10,7 @@ more: Of course, we took our lead from the experts in the hair world, and later 
 categories:
   - hair
   
-image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
+image: /images/beard.jpg
 author_staff_member: Mark Felton
 ---
 

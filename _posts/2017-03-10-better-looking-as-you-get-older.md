@@ -12,7 +12,7 @@ categories:
   - lifestyle
   - grooming
   
-image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
+image: /images/hair.jpg
 author_staff_member: Cillian O'Connor
 ---
 

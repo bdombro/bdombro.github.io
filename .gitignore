@@ -7,4 +7,3 @@ Gemfile.lock
 tmp
 js/custom.min.js
 js/libs.min.js
-_algolia_api_key

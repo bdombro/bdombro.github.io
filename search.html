@@ -1,6 +1,8 @@
 ---
 layout: html
 sitemap: false
+description: This is a page description
+image: /images/barber-shop.jpg
 ---
 {% raw %}
 
@@ -60,9 +62,11 @@ sitemap: false
   /* global instantsearch */
 
   app({
-    appId: 'MUZJLD13O2',
-    apiKey: '35caa441e6228ea7dbea9db1f8184600',
-    indexName: 'Benevolent Tech Main',
+    {% endraw %}
+    appId: '{{ site.algolia.application_id }}',
+    apiKey: '{{ site.algolia.searchonly_api_key }}',
+    indexName: '{{ site.algolia.index_name }}',
+    {% raw %}
   });
 
   function app(opts) {
