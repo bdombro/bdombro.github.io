@@ -85,7 +85,10 @@ gulp.task('css', function (cb) {
 gulp.task('js-libs', function (cb) {
   pump([
       gulp.src([
-        'js/_src/libs/smooth-scroll.js',
+        'js/_src/libs/jquery.min.js',
+        'js/_src/libs/jquery.scrollex.min.js',
+        'js/_src/libs/jquery.scrolly.min.js',
+        'js/_src/libs/skel.min.js',
         'js/_src/libs/echo.js'
       ]),
       sourcemaps.init(),
@@ -103,6 +106,7 @@ gulp.task('js-libs', function (cb) {
 gulp.task('js-custom', function (cb) {
   pump([
       gulp.src([
+        'js/_src/util.js',
         'js/_src/main.js'
       ]),
       sourcemaps.init(),

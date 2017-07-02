@@ -1,23 +1,37 @@
 <!-- Footer -->
-<footer id="footer-wrapper">
-    <div class="footer-links-left">
+{% if page.title != "Contact Success" %}
+<section id="footer">
+  <div class="container">
+    <header class="major">
+      <h2>Get in touch</h2>
+    </header>
+    <form method="post" action="{{ site.baseurl }}/contact-success">
+      <input type="hidden" name="_to" value="bdombro@gmail.com"/>
+      <input type="text" name="_gotcha" style="display: none;"/>
 
-      {% for link in site.data.footer.left_links %}
-        <a href="{{ site.baseurl }}{{ link.link }}" style="padding-right: 1em;">
-          {{ link.name }}
-        </a>
-      {% endfor %}
-
-    </div>
-
-    <div class="footer-links-right">
-
-      {% for link in site.data.footer.right_links %}
-      <a href="{{ site.baseurl }}{{ link.link }}" style="padding-right:1em; text-decoration:none;">
-        {% include social-icon.html icon=link.social_icon %}
-      </a>
-      {% endfor %}
-
-    </div>
-</footer>
-
+      <div class="row uniform">
+        <div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+        <div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+        <div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+        <div class="12u$">
+          <ul class="actions">
+            <li><input type="submit" value="Send Message" class="special" /></li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <ul class="icons">
+      <li><a href="{{ page.twitter }}" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="{{ page.facebook }}" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+      <li><a href="{{ page.instagram }}" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+      <!--<li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>-->
+      <li><a href="{{ page.email }}" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; Benevolent Tech</li><li>Design: <a href="https://benevolent.tech">Benevolent Tech</a></li>
+    </ul>
+  </footer>
+</section>
+{% endif %}

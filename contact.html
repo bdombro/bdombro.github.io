@@ -10,7 +10,7 @@ description: This is a page description
 ---
 
 <form action="{{ site.baseurl }}/contact-success" method="post">
-  <input type="hidden" name="_to" value="hi@benevolent.tech"/>
+  <input type="hidden" name="_to" value="{{ page.email }}"/>
   <input type="text" name="_gotcha" style="display: none;"/>
 
   <div class="row form-field">

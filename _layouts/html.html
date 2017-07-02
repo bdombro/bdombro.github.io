@@ -60,7 +60,6 @@
 			}
 	  </script>
 
-		<!--{% include register-service-worker.html %}-->
 		{% include ie.html %}
 		{% include noncritical-css.html %}
 		<link rel="stylesheet" href="/css/screen.css" />
@@ -78,11 +77,6 @@
 		<script defer type="text/javascript" src="/js/custom.min.js"></script>
 		{% endif %}
 
-		{% include google-analytics.html %}
 		{% include google-tag-manager.html %}
-		{% include trackduck.html %}
-
-		<!-- Load instantsearch last b/c is really big, and only needed for search page. -->
-		<script async defer src="/js/instantsearch.min.js"></script>
 	</body>
 </html>

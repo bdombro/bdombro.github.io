@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Master Prototype
+title: Highlights
 url: "https://benevolent.tech"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
@@ -18,8 +18,6 @@ social:
 
 # -----
 # Build
-
-permalink: /post/:title.html
 
 gems:
   - jekyll-sitemap
@@ -49,11 +47,6 @@ collections:
 jekyll-mentions:
   base_url: https://twitter.com
 
-paginate: 3
-paginate_path: "/blog/:num/"
-
-jekyll-archives:
-  enabled: ['categories']
 
 defaults:
   -
@@ -71,31 +64,3 @@ defaults:
       path: "contact-success.html"
     values:
       layout: "page"
-
-_comments:
-  description: This is the comment description
-  blurb: This is the site description
-
-algolia:
-  application_id: 'MXFG5KRPB4'
-  searchonly_api_key: '915e9c731ef75764d72b6f4da44ada7d'
-  index_name:     'Main'
-  record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
-  settings:
-      attributesToIndex:
-        - title
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
-        - unordered(text)
-        - unordered(tags)
-        - ul
-        - ol
-  excluded_files:
-      - blog
-      - blog/*
-      - search.html
-      - contact-success.html

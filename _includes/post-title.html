@@ -1,8 +1,0 @@
-<p>
-	{% for category in include.post.categories %}
-		<span>
-			<a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category | capitalize }}</a>
-		</span>
-	{% endfor %}
-	<span>{{ include.post.date | date: "%B %d, %Y" }}</span>
-</p>
