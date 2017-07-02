@@ -4,16 +4,20 @@
     <h1 class="editable">Brian Dombrowski</h1>
     <p class="editable">A Quick Get To know Me</p>
   </header>
+
+  {% if page.title != "Contact Success" %}
+  <div class="container hide-on-mobile">
+    <ul class="actions">
+      <li><a href="#one" class="button special scrolly">Begin</a></li>
+    </ul>
+  </div>
+  {% else %}
   <div class="container">
-    {% if page.title == "Contact Success" %}
     <p class="editable">Thanks, I'll be in touch soon.</p>
     <ul class="actions">
       <li><a href="/" class="button special scrolly">Go Back</a></li>
     </ul>
-    {% else %}
-    <ul class="actions">
-      <li><a href="#one" class="button special scrolly">Begin</a></li>
-    </ul>
-    {% endif %}
   </div>
+  {% endif %}
+
 </section>
