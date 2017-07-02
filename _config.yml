@@ -6,7 +6,7 @@ url: "https://briandombrowski.info"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: This is the site description
+description: A quick get to know me.
 author:
   name: Benevolent Tech
   email: brian@benevolent.tech
