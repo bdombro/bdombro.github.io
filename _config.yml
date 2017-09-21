@@ -19,7 +19,7 @@ social:
 # -----
 # Build
 
-permalink: /post/:title.html
+permalink: /post/:title
 
 gems:
   - jekyll-sitemap
