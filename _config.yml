@@ -28,7 +28,7 @@ gems:
   - jekyll-archives
   - jekyll_image_encode
   - jekyll-sitemap
-  - jekyll-paginate
+  - jekyll-paginate-v2
   # - algoliasearch-jekyll # depends on nokogiri. Never push this gem installed to production.
 
 exclude:
@@ -75,26 +75,26 @@ _comments:
   description: This is the comment description
   blurb: This is the site description
 
-algolia:
-  application_id: 'MXFG5KRPB4'
-  searchonly_api_key: '915e9c731ef75764d72b6f4da44ada7d'
-  index_name:     'Main'
-  record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
-  settings:
-      attributesToIndex:
-        - title
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
-        - unordered(text)
-        - unordered(tags)
-        - ul
-        - ol
-  excluded_files:
-      - blog
-      - blog/*
-      - search.html
-      - contact-success.html
+# algolia:
+#   application_id: 'MXFG5KRPB4'
+#   searchonly_api_key: '915e9c731ef75764d72b6f4da44ada7d'
+#   index_name:     'Main'
+#   record_css_selector: 'p,ul,ol,h1,h2,h3,h4,h5'
+#   settings:
+#       attributesToIndex:
+#         - title
+#         - h1
+#         - h2
+#         - h3
+#         - h4
+#         - h5
+#         - h6
+#         - unordered(text)
+#         - unordered(tags)
+#         - ul
+#         - ol
+#   excluded_files:
+#       - blog
+#       - blog/*
+#       - search.html
+#       - contact-success.html
