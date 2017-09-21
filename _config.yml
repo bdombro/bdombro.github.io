@@ -28,9 +28,8 @@ gems:
   - jekyll-archives
   - jekyll_image_encode
   - jekyll-sitemap
-  - jekyll-mentions
   - jekyll-paginate
-  - algoliasearch-jekyll
+  # - algoliasearch-jekyll # depends on nokogiri. Never push this gem installed to production.
 
 exclude:
   - Gemfile
