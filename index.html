@@ -312,7 +312,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
         <section style="display:none;">
           <h4>Form</h4>
-          <form method="post" action="#">
+          <form method="post" id="contactform" name="contactform" action="https://formspree.io/formspree@benevolent.tech">
+
+            <input type="hidden" name="_next" value="//briandombrowski.info/contact-success.html" />
+            <input type="text" name="_gotcha" id="entersomethingheretorevealyourefake" />
+            <input type="hidden" name="_cc" value="bdombro@gmail.com" />
+
             <div class="row uniform">
               <div class="6u 12u$(xsmall)">
                 <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
