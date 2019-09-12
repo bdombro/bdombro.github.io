@@ -1,0 +1,25 @@
+{
+  "short_name": "Sunce Sailing",
+  "name": "Sunce Sailing",
+  "icons": [
+    {
+      "src": "touch-icon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "touch-icon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "background_color": "#FAFAFA",
+  "theme_color": "#012559",
+  "display": "standalone",
+  "orientation": "portrait"
+}
